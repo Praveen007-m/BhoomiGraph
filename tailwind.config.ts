@@ -58,9 +58,9 @@ export default {
         },
         farm: {
           green: "hsl(var(--farm-green))",
-          "green-light": "hsl(var(--farm-green-light))",
-          "green-glow": "hsl(var(--farm-green-glow))",
-          emerald: "hsl(var(--farm-emerald))",
+          blue: "hsl(var(--farm-blue))",
+          white: "hsl(var(--farm-white))",
+          grey: "hsl(var(--farm-grey))",
           dark: "hsl(var(--farm-dark))",
           card: "hsl(var(--farm-card))",
           surface: "hsl(var(--farm-surface))",
@@ -99,8 +99,8 @@ export default {
           "100%": { opacity: "1" },
         },
         "pulse-glow": {
-          "0%, 100%": { boxShadow: "0 0 20px hsl(140 60% 40% / 0.3)" },
-          "50%": { boxShadow: "0 0 40px hsl(140 60% 40% / 0.5)" },
+          "0%, 100%": { boxShadow: "0 0 20px hsl(121 58% 39% / 0.3)" },
+          "50%": { boxShadow: "0 0 40px hsl(121 58% 39% / 0.5)" },
         },
         "count-up": {
           "0%": { opacity: "0", transform: "translateY(10px)" },
