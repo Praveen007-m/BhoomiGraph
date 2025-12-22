@@ -1,26 +1,42 @@
 import { motion } from 'framer-motion';
-import { Repeat, CreditCard, Handshake, Award } from 'lucide-react';
+import { Plane, Repeat, Database, Sprout, Tractor, Landmark } from 'lucide-react';
 
 const revenueStreams = [
   {
+    icon: Plane,
+    channel: 'Drone & GIS Services',
+    description: 'Precision mapping and farm digitization',
+    type: 'Per-acre',
+  },
+  {
     icon: Repeat,
-    title: 'SaaS Subscriptions',
-    description: 'Tiered plans for farmers, FPOs, and enterprises with monthly/annual billing',
+    channel: 'SaaS Subscriptions',
+    description: 'Platform access for FPOs, banks, insurers',
+    type: 'Recurring',
   },
   {
-    icon: CreditCard,
-    title: 'Pay-per-Use Data Services',
-    description: 'Credit-based access for satellite imagery, drone surveys, and soil reports',
+    icon: Database,
+    channel: 'Data Licensing',
+    description: 'API-based insights for B2B partners',
+    type: 'Annual',
   },
   {
-    icon: Handshake,
-    title: 'B2B Partnerships',
-    description: 'Custom integrations for banks, insurers, and government departments',
+    icon: Sprout,
+    channel: 'Crop Advisory Services',
+    description: 'Subscription and sponsored content',
+    type: 'Monthly / Annual',
   },
   {
-    icon: Award,
-    title: 'Licensing & White-Label',
-    description: 'Platform licensing for agri-corporates and international markets',
+    icon: Tractor,
+    channel: 'Mechanization Marketplace',
+    description: 'Partner commissions and referrals',
+    type: 'Transactional',
+  },
+  {
+    icon: Landmark,
+    channel: 'Government & CSR Projects',
+    description: 'Program digitization contracts',
+    type: 'Project-based',
   },
 ];
 
@@ -35,7 +51,7 @@ const RevenueModelSection = () => {
           className="text-center mb-16"
         >
           <span className="inline-block px-4 py-2 rounded-full bg-primary/20 text-primary text-sm font-medium mb-4">
-            Revenue Model
+            💰 Revenue Model
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
             Sustainable Business Model
@@ -45,21 +61,28 @@ const RevenueModelSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {revenueStreams.map((stream, index) => (
             <motion.div
-              key={stream.title}
+              key={stream.channel}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               className="card-gradient rounded-2xl p-6 border border-border/50 hover:border-primary/50 transition-all hover:shadow-lg"
             >
-              <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center mb-4">
-                <stream.icon className="w-6 h-6 text-primary" />
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0">
+                  <stream.icon className="w-6 h-6 text-primary" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-display font-semibold mb-1">{stream.channel}</h3>
+                  <p className="text-sm text-muted-foreground mb-3">{stream.description}</p>
+                  <span className="inline-block px-3 py-1 rounded-full bg-secondary/20 text-secondary text-xs font-medium">
+                    {stream.type}
+                  </span>
+                </div>
               </div>
-              <h3 className="text-lg font-display font-semibold mb-2">{stream.title}</h3>
-              <p className="text-sm text-muted-foreground">{stream.description}</p>
             </motion.div>
           ))}
         </div>
