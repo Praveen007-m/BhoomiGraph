@@ -99,8 +99,8 @@ const ContactSection = () => {
             <div className="card-gradient rounded-xl p-6 border border-border/50 hover:border-primary/50 transition-all duration-300">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-secondary/20 flex items-center justify-center">
-                    <FileText className="w-6 h-6 text-secondary" />
+                  <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center">
+                    <FileText className="w-6 h-6 text-primary" />
                   </div>
                   <div>
                     <h4 className="font-semibold">Download Brochure</h4>

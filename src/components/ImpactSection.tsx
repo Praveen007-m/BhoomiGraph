@@ -24,7 +24,7 @@ const impactAreas = [
   {
     icon: Users,
     title: 'Social',
-    color: 'secondary',
+    color: 'primary',
     points: [
       'Generates rural employment in drone operations, advisory, and data management',
       'Promotes digital inclusion for smallholder farmers',

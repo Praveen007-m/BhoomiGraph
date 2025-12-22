@@ -49,8 +49,8 @@ const AboutSection = () => {
             transition={{ delay: 0.1 }}
             className="card-gradient rounded-2xl p-8 border border-border/50"
           >
-            <div className="w-12 h-12 rounded-xl bg-secondary/20 flex items-center justify-center mb-4">
-              <Telescope className="w-6 h-6 text-secondary" />
+            <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center mb-4">
+              <Telescope className="w-6 h-6 text-primary" />
             </div>
             <h3 className="text-xl font-display font-semibold mb-3">Our Vision</h3>
             <p className="text-muted-foreground leading-relaxed">
