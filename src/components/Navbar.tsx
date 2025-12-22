@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Leaf } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import logo from '@/assets/logo.png';
 
 const navLinks = [
   { label: 'Home', href: '#home' },
@@ -30,7 +29,9 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="#home" className="flex items-center gap-2 group">
-            <img src={logo} alt="FarmOS Logo" className="w-10 h-10 rounded-lg shadow-md shadow-primary/20" />
+            <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center shadow-md shadow-primary/20">
+              <Leaf className="w-6 h-6 text-primary-foreground" />
+            </div>
             <span className="text-xl font-display font-bold">
               Farm<span className="text-primary">OS</span>
             </span>
