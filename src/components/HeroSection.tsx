@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Play } from 'lucide-react';
+import { ArrowRight, Handshake } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import AnimatedCounter from './AnimatedCounter';
 import heroImage from '@/assets/hero-farm.jpg';
@@ -64,7 +64,7 @@ const HeroSection = () => {
               <ArrowRight className="w-5 h-5" />
             </Button>
             <Button variant="heroOutline" size="xl">
-              <Play className="w-5 h-5" />
+              <Handshake className="w-5 h-5" />
               Partner With Us
             </Button>
           </motion.div>
