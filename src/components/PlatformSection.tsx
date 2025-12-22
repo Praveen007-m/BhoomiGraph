@@ -68,7 +68,7 @@ const PlatformSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-2 rounded-full bg-secondary/20 text-secondary text-sm font-medium mb-4">
+          <span className="inline-block px-4 py-2 rounded-full bg-secondary text-secondary-foreground text-sm font-medium mb-4">
             Our Platform
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">

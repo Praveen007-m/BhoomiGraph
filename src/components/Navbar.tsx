@@ -33,7 +33,7 @@ const Navbar = () => {
               <Leaf className="w-6 h-6 text-primary-foreground" />
             </div>
             <span className="text-xl font-display font-bold">
-              Farm<span className="text-primary">OS</span>
+              Bhoomi<span className="text-primary">Graph</span>
             </span>
           </a>
 
