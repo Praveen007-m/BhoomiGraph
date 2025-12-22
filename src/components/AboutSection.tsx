@@ -84,12 +84,13 @@ const AboutSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          className="text-center"
         >
-          <div className="flex items-center gap-3 mb-8">
+          <div className="flex items-center justify-center gap-3 mb-4">
             <UsersRound className="w-6 h-6 text-primary" />
             <h3 className="text-2xl font-display font-semibold">Our Team</h3>
           </div>
-          <p className="text-muted-foreground mb-8">
+          <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
             BhoomiGraph brings together domain experts from across agriculture and technology:
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
