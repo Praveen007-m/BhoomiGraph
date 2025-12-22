@@ -58,8 +58,9 @@ export default {
         },
         farm: {
           green: "hsl(var(--farm-green))",
+          "green-light": "hsl(var(--farm-green-light))",
           "green-glow": "hsl(var(--farm-green-glow))",
-          blue: "hsl(var(--farm-blue))",
+          emerald: "hsl(var(--farm-emerald))",
           dark: "hsl(var(--farm-dark))",
           card: "hsl(var(--farm-card))",
           surface: "hsl(var(--farm-surface))",
