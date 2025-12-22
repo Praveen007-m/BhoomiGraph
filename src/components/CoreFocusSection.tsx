@@ -18,7 +18,7 @@ const focusAreas = [
     icon: CreditCard,
     title: 'Financial & Insurance Access',
     description: 'Verified data powering instant access to loans, credit, and crop insurance.',
-    color: 'secondary',
+    color: 'primary',
   },
 ];
 
