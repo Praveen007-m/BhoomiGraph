@@ -2,7 +2,7 @@ import { Leaf, Linkedin, Youtube, Twitter } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="py-12 border-t border-border/50">
+    <footer className="py-12 bg-[hsl(140,50%,12%)] text-white border-t border-primary/20">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo & Tagline */}
@@ -15,7 +15,7 @@ const Footer = () => {
                 Farm<span className="text-primary">OS</span>
               </span>
             </a>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-white/70">
               Farm data. Financial access. Future-ready agriculture.
             </p>
           </div>
@@ -24,21 +24,21 @@ const Footer = () => {
           <div className="flex items-center gap-4">
             <a
               href="#"
-              className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center hover:bg-primary/20 transition-colors"
+              className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-primary/30 transition-colors"
               aria-label="LinkedIn"
             >
               <Linkedin className="w-5 h-5" />
             </a>
             <a
               href="#"
-              className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center hover:bg-primary/20 transition-colors"
+              className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-primary/30 transition-colors"
               aria-label="YouTube"
             >
               <Youtube className="w-5 h-5" />
             </a>
             <a
               href="#"
-              className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center hover:bg-primary/20 transition-colors"
+              className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-primary/30 transition-colors"
               aria-label="Twitter"
             >
               <Twitter className="w-5 h-5" />
@@ -46,8 +46,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-border/50 mt-8 pt-8 text-center">
-          <p className="text-sm text-muted-foreground">
+        <div className="border-t border-white/10 mt-8 pt-8 text-center">
+          <p className="text-sm text-white/60">
             © 2025 FarmOS Technologies Pvt. Ltd. | All Rights Reserved
           </p>
         </div>
