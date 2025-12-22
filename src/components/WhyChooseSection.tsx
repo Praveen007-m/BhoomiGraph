@@ -39,10 +39,10 @@ const WhyChooseSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-              Why Choose <span className="text-gradient">BhoomiGraph</span>
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 text-center">
+              Why Choose <span className="text-gradient">FarmOS</span>
             </h2>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-lg text-muted-foreground mb-8 text-center">
               We combine cutting-edge technology with deep agricultural expertise to deliver solutions that transform farming operations.
             </p>
             <div className="space-y-4">
