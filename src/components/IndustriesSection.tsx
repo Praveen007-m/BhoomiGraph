@@ -50,54 +50,26 @@ const IndustriesSection = () => {
           </p>
         </motion.div>
 
-        {/* Desktop view */}
-        <div className="hidden md:grid gap-4">
+        {/* Card Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {industries.map((industry, index) => (
             <motion.div
               key={industry.stakeholder}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
               className="group"
             >
-              <div className="card-gradient rounded-xl p-6 border border-border/50 hover:border-primary/50 transition-all duration-300 flex items-center gap-4">
-                <div className="flex items-center gap-4 w-1/3">
-                  <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                    <industry.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <h3 className="font-display font-semibold">{industry.stakeholder}</h3>
+              <div className="card-gradient rounded-2xl p-6 border border-border/50 hover:border-primary/50 transition-all duration-300 h-full flex flex-col items-center text-center hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/30 to-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <industry.icon className="w-8 h-8 text-primary" />
                 </div>
-                <p className="text-muted-foreground w-2/3">{industry.value}</p>
+                <h3 className="font-display font-semibold text-lg mb-3">{industry.stakeholder}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{industry.value}</p>
               </div>
             </motion.div>
           ))}
-        </div>
-
-        {/* Mobile horizontal scroll */}
-        <div className="md:hidden overflow-x-auto pb-4 -mx-4 px-4">
-          <div className="flex gap-4" style={{ width: 'max-content' }}>
-            {industries.map((industry, index) => (
-              <motion.div
-                key={industry.stakeholder}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="w-72 flex-shrink-0"
-              >
-                <div className="card-gradient rounded-xl p-6 border border-border/50 h-full">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0">
-                      <industry.icon className="w-5 h-5 text-primary" />
-                    </div>
-                    <h3 className="font-display font-semibold text-sm">{industry.stakeholder}</h3>
-                  </div>
-                  <p className="text-muted-foreground text-sm">{industry.value}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </div>
     </section>
