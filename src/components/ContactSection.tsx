@@ -41,7 +41,7 @@ const ContactSection = () => {
                   <div>
                     <h4 className="font-semibold mb-1">Head Office</h4>
                     <p className="text-muted-foreground text-sm">
-                      FarmOS Technologies Pvt. Ltd.<br />
+                      BhoomiGraph Technologies Pvt. Ltd.<br />
                       Bangalore, Karnataka, India
                     </p>
                   </div>
@@ -54,9 +54,9 @@ const ContactSection = () => {
                   <div>
                     <h4 className="font-semibold mb-1">Email</h4>
                     <div className="space-y-1 text-sm text-muted-foreground">
-                      <p>Partnerships: <a href="mailto:partners@farmos.tech" className="text-primary hover:underline">partners@farmos.tech</a></p>
-                      <p>Investments: <a href="mailto:invest@farmos.tech" className="text-primary hover:underline">invest@farmos.tech</a></p>
-                      <p>General: <a href="mailto:hello@farmos.tech" className="text-primary hover:underline">hello@farmos.tech</a></p>
+                      <p>Partnerships: <a href="mailto:partners@bhoomigraph.tech" className="text-primary hover:underline">partners@bhoomigraph.tech</a></p>
+                      <p>Investments: <a href="mailto:invest@bhoomigraph.tech" className="text-primary hover:underline">invest@bhoomigraph.tech</a></p>
+                      <p>General: <a href="mailto:hello@bhoomigraph.tech" className="text-primary hover:underline">hello@bhoomigraph.tech</a></p>
                     </div>
                   </div>
                 </div>
@@ -89,7 +89,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold">Request a Demo</h4>
-                    <p className="text-sm text-muted-foreground">See FarmOS in action</p>
+                    <p className="text-sm text-muted-foreground">See BhoomiGraph in action</p>
                   </div>
                 </div>
                 <Button>Get Started</Button>
