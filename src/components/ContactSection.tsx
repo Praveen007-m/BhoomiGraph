@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { MapPin, Mail, Phone, ArrowRight, Download, Users } from 'lucide-react';
+import { MapPin, Mail, Phone, Monitor, FileText, Rocket } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const ContactSection = () => {
@@ -85,7 +85,7 @@ const ContactSection = () => {
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center">
-                    <ArrowRight className="w-6 h-6 text-primary" />
+                    <Monitor className="w-6 h-6 text-primary" />
                   </div>
                   <div>
                     <h4 className="font-semibold">Request a Demo</h4>
@@ -100,7 +100,7 @@ const ContactSection = () => {
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-xl bg-secondary/20 flex items-center justify-center">
-                    <Download className="w-6 h-6 text-secondary" />
+                    <FileText className="w-6 h-6 text-secondary" />
                   </div>
                   <div>
                     <h4 className="font-semibold">Download Brochure</h4>
@@ -115,7 +115,7 @@ const ContactSection = () => {
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center">
-                    <Users className="w-6 h-6 text-accent" />
+                    <Rocket className="w-6 h-6 text-accent" />
                   </div>
                   <div>
                     <h4 className="font-semibold">Join Our Pilot Program</h4>

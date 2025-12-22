@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Target, Eye, BookOpen, Users } from 'lucide-react';
+import { Crosshair, Telescope, History, UsersRound } from 'lucide-react';
 
 const teamRoles = [
   { icon: '🧑‍🌾', title: 'Agronomists', description: 'Guiding farmers toward precision cultivation' },
@@ -34,7 +34,7 @@ const AboutSection = () => {
             className="card-gradient rounded-2xl p-8 border border-border/50"
           >
             <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center mb-4">
-              <Target className="w-6 h-6 text-primary" />
+              <Crosshair className="w-6 h-6 text-primary" />
             </div>
             <h3 className="text-xl font-display font-semibold mb-3">Our Mission</h3>
             <p className="text-muted-foreground leading-relaxed">
@@ -50,7 +50,7 @@ const AboutSection = () => {
             className="card-gradient rounded-2xl p-8 border border-border/50"
           >
             <div className="w-12 h-12 rounded-xl bg-secondary/20 flex items-center justify-center mb-4">
-              <Eye className="w-6 h-6 text-secondary" />
+              <Telescope className="w-6 h-6 text-secondary" />
             </div>
             <h3 className="text-xl font-display font-semibold mb-3">Our Vision</h3>
             <p className="text-muted-foreground leading-relaxed">
@@ -68,7 +68,7 @@ const AboutSection = () => {
         >
           <div className="flex items-start gap-4">
             <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center flex-shrink-0">
-              <BookOpen className="w-6 h-6 text-accent" />
+              <History className="w-6 h-6 text-accent" />
             </div>
             <div>
               <h3 className="text-xl font-display font-semibold mb-3">Our Story</h3>
@@ -86,7 +86,7 @@ const AboutSection = () => {
           viewport={{ once: true }}
         >
           <div className="flex items-center gap-3 mb-8">
-            <Users className="w-6 h-6 text-primary" />
+            <UsersRound className="w-6 h-6 text-primary" />
             <h3 className="text-2xl font-display font-semibold">Our Team</h3>
           </div>
           <p className="text-muted-foreground mb-8">

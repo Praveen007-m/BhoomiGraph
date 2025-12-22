@@ -1,21 +1,21 @@
 import { motion } from 'framer-motion';
-import { Database, Sprout, Wallet } from 'lucide-react';
+import { Satellite, Wheat, CreditCard } from 'lucide-react';
 
 const focusAreas = [
   {
-    icon: Database,
+    icon: Satellite,
     title: 'Farm Data Intelligence',
     description: 'Unified data from drones, satellites, and sensors — processed into high-resolution insights for precision agriculture.',
     color: 'primary',
   },
   {
-    icon: Sprout,
+    icon: Wheat,
     title: 'Agronomy & Crop Advisory',
     description: 'Personalized recommendations from our agronomy engine to improve yield, optimize inputs, and build climate resilience.',
     color: 'accent',
   },
   {
-    icon: Wallet,
+    icon: CreditCard,
     title: 'Financial & Insurance Access',
     description: 'Verified data powering instant access to loans, credit, and crop insurance.',
     color: 'secondary',
