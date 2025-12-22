@@ -80,7 +80,7 @@ const RevenueModelSection = () => {
                   <p className="text-sm text-muted-foreground mb-3">{stream.description}</p>
                   <div className="flex items-center gap-2">
                     <span className="text-xs font-semibold text-foreground">Type:</span>
-                    <span className="inline-block px-3 py-1 rounded-full bg-secondary/20 text-secondary text-xs font-medium">
+                    <span className="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-semibold">
                       {stream.type}
                     </span>
                   </div>
