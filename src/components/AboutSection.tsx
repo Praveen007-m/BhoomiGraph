@@ -63,9 +63,11 @@ const AboutSection = () => {
               <History className="w-6 h-6 text-primary" />
             </div>
             <h3 className="text-xl font-display font-semibold mb-3">Our Story</h3>
-            <p className="text-muted-foreground leading-relaxed">
-              FarmOS Technologies was founded to solve one of India's deepest challenges — fragmented and underutilized agricultural data. We bridge this gap by building a Data Intelligence Layer — connecting ground data with cloud analytics to serve farmers, banks, insurers, and policymakers alike.
-            </p>
+            <div className="text-muted-foreground leading-relaxed space-y-3">
+              <p>FarmOS Technologies was founded to solve one of India's deepest challenges — fragmented and underutilized agricultural data.</p>
+              <p>Despite the availability of drones, satellites, and IoT devices, farmers and institutions rarely benefit from unified insights.</p>
+              <p>We bridge this gap by building a <span className="font-semibold text-foreground">Data Intelligence Layer</span> — connecting ground data with cloud analytics to serve farmers, banks, insurers, and policymakers alike.</p>
+            </div>
           </motion.div>
 
           <motion.div
@@ -79,9 +81,13 @@ const AboutSection = () => {
               <UsersRound className="w-6 h-6 text-primary" />
             </div>
             <h3 className="text-xl font-display font-semibold mb-3">Our Team</h3>
-            <p className="text-muted-foreground leading-relaxed">
-              FarmOS brings together domain experts — agronomists, GIS & UAV specialists, software & data engineers, and financial & policy experts — working together to transform agriculture.
-            </p>
+            <div className="text-muted-foreground leading-relaxed space-y-2">
+              <p>FarmOS brings together domain experts from across agriculture and technology:</p>
+              <p><span className="text-lg">🧑‍🌾</span> <span className="font-semibold text-foreground">Agronomists</span> — Guiding farmers toward precision cultivation.</p>
+              <p><span className="text-lg">🛰️</span> <span className="font-semibold text-foreground">GIS & UAV Specialists</span> — Capturing and processing spatial data with accuracy.</p>
+              <p><span className="text-lg">💻</span> <span className="font-semibold text-foreground">Software & Data Engineers</span> — Building scalable, secure SaaS infrastructure.</p>
+              <p><span className="text-lg">💼</span> <span className="font-semibold text-foreground">Financial & Policy Experts</span> — Enabling access to credit, insurance, and markets.</p>
+            </div>
           </motion.div>
         </div>
       </div>
