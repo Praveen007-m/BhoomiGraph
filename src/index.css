@@ -6,62 +6,62 @@
 
 @layer base {
   :root {
-    --background: 160 30% 6%;
-    --foreground: 0 0% 98%;
+    --background: 120 20% 98%;
+    --foreground: 160 30% 10%;
 
-    --card: 160 25% 10%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 160 30% 10%;
 
-    --popover: 160 25% 10%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 160 30% 10%;
 
-    --primary: 140 60% 40%;
+    --primary: 145 63% 32%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 200 80% 38%;
+    --secondary: 200 80% 45%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 160 20% 15%;
-    --muted-foreground: 160 10% 60%;
+    --muted: 120 15% 94%;
+    --muted-foreground: 160 15% 45%;
 
-    --accent: 140 60% 45%;
+    --accent: 145 55% 38%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 160 20% 20%;
-    --input: 160 20% 20%;
-    --ring: 140 60% 40%;
+    --border: 120 15% 88%;
+    --input: 120 15% 88%;
+    --ring: 145 63% 32%;
 
     --radius: 0.75rem;
 
     /* Custom FarmOS tokens */
-    --farm-green: 140 60% 40%;
-    --farm-green-glow: 140 70% 50%;
-    --farm-blue: 200 80% 38%;
-    --farm-dark: 160 30% 6%;
-    --farm-card: 160 25% 10%;
-    --farm-surface: 160 20% 12%;
+    --farm-green: 145 63% 32%;
+    --farm-green-glow: 145 70% 42%;
+    --farm-blue: 200 80% 45%;
+    --farm-dark: 160 30% 10%;
+    --farm-card: 0 0% 100%;
+    --farm-surface: 120 20% 96%;
     
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(160, 30%, 6%) 0%, hsl(160, 35%, 12%) 100%);
-    --gradient-primary: linear-gradient(135deg, hsl(140, 60%, 40%) 0%, hsl(140, 70%, 50%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(160, 25%, 12%) 0%, hsl(160, 25%, 8%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(145, 63%, 32%) 0%, hsl(145, 70%, 42%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(145, 63%, 32%) 0%, hsl(145, 70%, 42%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(120, 20%, 98%) 100%);
     
     /* Shadows */
-    --shadow-glow: 0 0 40px hsl(140, 60%, 40% / 0.3);
-    --shadow-card: 0 10px 40px hsl(0, 0%, 0% / 0.3);
+    --shadow-glow: 0 0 40px hsl(145, 63%, 32% / 0.2);
+    --shadow-card: 0 10px 40px hsl(160, 20%, 20% / 0.08);
     
     /* Sidebar */
-    --sidebar-background: 160 25% 8%;
-    --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 140 60% 40%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 160 30% 10%;
+    --sidebar-primary: 145 63% 32%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 160 20% 15%;
-    --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 160 20% 20%;
-    --sidebar-ring: 140 60% 40%;
+    --sidebar-accent: 120 15% 94%;
+    --sidebar-accent-foreground: 160 30% 10%;
+    --sidebar-border: 120 15% 88%;
+    --sidebar-ring: 145 63% 32%;
   }
 
   .dark {
@@ -108,14 +108,14 @@
   }
   
   .glow-primary {
-    box-shadow: 0 0 30px hsl(140 60% 40% / 0.4);
+    box-shadow: 0 0 30px hsl(145 63% 32% / 0.3);
   }
   
   .glow-sm {
-    box-shadow: 0 0 20px hsl(140 60% 40% / 0.25);
+    box-shadow: 0 0 20px hsl(145 63% 32% / 0.2);
   }
 
   .card-gradient {
-    background: linear-gradient(180deg, hsl(160, 25%, 12%) 0%, hsl(160, 25%, 8%) 100%);
+    background: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(120, 20%, 98%) 100%);
   }
 }

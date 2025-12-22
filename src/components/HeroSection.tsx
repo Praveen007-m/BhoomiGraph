@@ -6,16 +6,16 @@ import heroImage from '@/assets/hero-farm.jpg';
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
+    <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-gradient-to-br from-background via-background to-primary/5">
+      {/* Background Image - Right Side */}
+      <div className="absolute right-0 top-0 w-full lg:w-3/5 h-full z-0">
         <img
           src={heroImage}
           alt="Aerial view of agricultural farmland with drone"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/50 via-transparent to-transparent lg:hidden" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
