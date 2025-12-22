@@ -1,24 +1,24 @@
 import { motion } from 'framer-motion';
-import { Globe, Brain, Link, Layers, Leaf, CheckCircle2 } from 'lucide-react';
+import { Satellite, BrainCircuit, Plug, Server, Leaf, BadgeCheck } from 'lucide-react';
 
 const features = [
   {
-    icon: Globe,
+    icon: Satellite,
     title: 'Data from Ground + Space',
     description: '360° farm visibility with integrated drone, satellite, and sensor data',
   },
   {
-    icon: Brain,
+    icon: BrainCircuit,
     title: 'AI-Driven Insights',
     description: 'Machine learning models validated by expert agronomists',
   },
   {
-    icon: Link,
+    icon: Plug,
     title: 'Seamless API Integration',
     description: 'Connect with banks, insurers, and enterprise systems effortlessly',
   },
   {
-    icon: Layers,
+    icon: Server,
     title: 'Scalable SaaS Platform',
     description: 'Built for multi-stakeholder use from small farms to enterprises',
   },
@@ -75,7 +75,7 @@ const WhyChooseSection = () => {
           >
             <div className="card-gradient rounded-3xl p-8 border border-border/50">
               <div className="flex items-center gap-3 mb-6">
-                <CheckCircle2 className="w-6 h-6 text-primary" />
+                <BadgeCheck className="w-6 h-6 text-primary" />
                 <span className="font-display font-semibold">Trusted By Industry Leaders</span>
               </div>
               <div className="grid grid-cols-3 gap-4">

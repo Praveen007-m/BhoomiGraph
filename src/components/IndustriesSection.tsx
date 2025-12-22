@@ -1,29 +1,29 @@
 import { motion } from 'framer-motion';
-import { Users, Building2, Shield, Landmark, Briefcase } from 'lucide-react';
+import { Tractor, Landmark, ShieldCheck, Building, Package } from 'lucide-react';
 
 const industries = [
   {
-    icon: Users,
+    icon: Tractor,
     stakeholder: 'Farmers & FPOs',
     value: 'Farm visibility, crop advisory, and direct financial linkages',
   },
   {
-    icon: Building2,
+    icon: Landmark,
     stakeholder: 'Banks & NBFCs',
     value: 'Verified data for accurate risk scoring and faster loan approvals',
   },
   {
-    icon: Shield,
+    icon: ShieldCheck,
     stakeholder: 'Insurance Companies',
     value: 'Satellite + ground data for real-time claim validation',
   },
   {
-    icon: Landmark,
+    icon: Building,
     stakeholder: 'Government & CSR Bodies',
     value: 'Data-driven monitoring and impact assessment tools',
   },
   {
-    icon: Briefcase,
+    icon: Package,
     stakeholder: 'Agri-Businesses & Exporters',
     value: 'Input optimization, yield traceability, and sustainability insights',
   },

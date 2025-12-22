@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
-import { TrendingUp, Leaf, Heart } from 'lucide-react';
+import { IndianRupee, TreePine, Users } from 'lucide-react';
 
 const impactAreas = [
   {
-    icon: TrendingUp,
+    icon: IndianRupee,
     title: 'Economic',
     color: 'primary',
     points: [
@@ -13,7 +13,7 @@ const impactAreas = [
     ],
   },
   {
-    icon: Leaf,
+    icon: TreePine,
     title: 'Environmental',
     color: 'accent',
     points: [
@@ -22,7 +22,7 @@ const impactAreas = [
     ],
   },
   {
-    icon: Heart,
+    icon: Users,
     title: 'Social',
     color: 'secondary',
     points: [

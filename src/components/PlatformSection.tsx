@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
-import { Map, Activity, Sprout, Wallet, Wrench, Code } from 'lucide-react';
+import { MapPin, HeartPulse, Wheat, ShieldCheck, Tractor, Database } from 'lucide-react';
 
 const modules = [
   {
-    icon: Map,
+    icon: MapPin,
     title: 'Farm Digitization Suite',
     features: [
       'Advanced mapping for land boundaries, elevation, and slope',
@@ -12,7 +12,7 @@ const modules = [
     ],
   },
   {
-    icon: Activity,
+    icon: HeartPulse,
     title: 'Farm Health Dashboard',
     features: [
       'Real-time vegetation analysis and crop health monitoring',
@@ -21,7 +21,7 @@ const modules = [
     ],
   },
   {
-    icon: Sprout,
+    icon: Wheat,
     title: 'Agronomy & Advisory Hub',
     features: [
       'Expert-backed crop and input recommendations',
@@ -30,7 +30,7 @@ const modules = [
     ],
   },
   {
-    icon: Wallet,
+    icon: ShieldCheck,
     title: 'Financial & Insurance Integration',
     features: [
       'Automated crop verification and land geotagging',
@@ -39,7 +39,7 @@ const modules = [
     ],
   },
   {
-    icon: Wrench,
+    icon: Tractor,
     title: 'Mechanization & Partner Network',
     features: [
       'Access verified partners for tractors, harvesters, and sprayers',
@@ -48,7 +48,7 @@ const modules = [
     ],
   },
   {
-    icon: Code,
+    icon: Database,
     title: 'Data Intelligence API',
     features: [
       'Secure API suite for banks, insurers, and agri-enterprises',
