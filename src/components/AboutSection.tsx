@@ -73,7 +73,7 @@ const AboutSection = () => {
             <div>
               <h3 className="text-xl font-display font-semibold mb-3">Our Story</h3>
               <p className="text-muted-foreground leading-relaxed">
-                BhoomiGraph Technologies was founded to solve one of India's deepest challenges — fragmented and underutilized agricultural data. Despite the availability of drones, satellites, and IoT devices, farmers and institutions rarely benefit from unified insights. We bridge this gap by building a Data Intelligence Layer — connecting ground data with cloud analytics to serve farmers, banks, insurers, and policymakers alike.
+                FarmOS Technologies was founded to solve one of India's deepest challenges — fragmented and underutilized agricultural data. Despite the availability of drones, satellites, and IoT devices, farmers and institutions rarely benefit from unified insights. We bridge this gap by building a Data Intelligence Layer — connecting ground data with cloud analytics to serve farmers, banks, insurers, and policymakers alike.
               </p>
             </div>
           </div>
@@ -91,7 +91,7 @@ const AboutSection = () => {
             <h3 className="text-2xl font-display font-semibold">Our Team</h3>
           </div>
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-            BhoomiGraph brings together domain experts from across agriculture and technology:
+            FarmOS brings together domain experts from across agriculture and technology:
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {teamRoles.map((role, index) => (
