@@ -25,12 +25,12 @@ const AboutSection = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="card-gradient rounded-2xl p-8 border border-border/50 min-h-[220px]"
+            className="card-mission rounded-2xl p-8 border border-primary/20 min-h-[220px] shadow-lg hover:shadow-xl transition-shadow duration-300"
           >
-            <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center mb-4">
+            <div className="w-12 h-12 rounded-xl bg-primary/30 flex items-center justify-center mb-4">
               <Crosshair className="w-6 h-6 text-primary" />
             </div>
-            <h3 className="text-xl font-display font-semibold mb-3">Our Mission</h3>
+            <h3 className="text-xl font-display font-semibold mb-3 text-foreground">Our Mission</h3>
             <p className="text-muted-foreground leading-relaxed">
               To create India's most trusted agri-data ecosystem — improving productivity, profitability, and sustainability through data-driven decisions.
             </p>
@@ -41,12 +41,12 @@ const AboutSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="card-gradient rounded-2xl p-8 border border-border/50 min-h-[220px]"
+            className="card-vision rounded-2xl p-8 border border-secondary/20 min-h-[220px] shadow-lg hover:shadow-xl transition-shadow duration-300"
           >
-            <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center mb-4">
-              <Telescope className="w-6 h-6 text-primary" />
+            <div className="w-12 h-12 rounded-xl bg-secondary/30 flex items-center justify-center mb-4">
+              <Telescope className="w-6 h-6 text-secondary" />
             </div>
-            <h3 className="text-xl font-display font-semibold mb-3">Our Vision</h3>
+            <h3 className="text-xl font-display font-semibold mb-3 text-foreground">Our Vision</h3>
             <p className="text-muted-foreground leading-relaxed">
               To empower every farmer with the intelligence to cultivate smarter, connect better, and grow sustainably.
             </p>
@@ -57,12 +57,12 @@ const AboutSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="card-gradient rounded-2xl p-8 border border-border/50 min-h-[220px]"
+            className="card-story rounded-2xl p-8 border border-orange-300/40 min-h-[220px] shadow-lg hover:shadow-xl transition-shadow duration-300"
           >
-            <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center mb-4">
-              <History className="w-6 h-6 text-primary" />
+            <div className="w-12 h-12 rounded-xl bg-orange-400/30 flex items-center justify-center mb-4">
+              <History className="w-6 h-6 text-orange-600" />
             </div>
-            <h3 className="text-xl font-display font-semibold mb-3">Our Story</h3>
+            <h3 className="text-xl font-display font-semibold mb-3 text-foreground">Our Story</h3>
             <div className="text-muted-foreground leading-relaxed space-y-3">
               <p>FarmOS Technologies was founded to solve one of India's deepest challenges — fragmented and underutilized agricultural data.</p>
               <p>Despite the availability of drones, satellites, and IoT devices, farmers and institutions rarely benefit from unified insights.</p>
@@ -75,12 +75,12 @@ const AboutSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
-            className="card-gradient rounded-2xl p-8 border border-border/50 min-h-[220px]"
+            className="card-team rounded-2xl p-8 border border-purple-300/40 min-h-[220px] shadow-lg hover:shadow-xl transition-shadow duration-300"
           >
-            <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center mb-4">
-              <UsersRound className="w-6 h-6 text-primary" />
+            <div className="w-12 h-12 rounded-xl bg-purple-400/30 flex items-center justify-center mb-4">
+              <UsersRound className="w-6 h-6 text-purple-600" />
             </div>
-            <h3 className="text-xl font-display font-semibold mb-3">Our Team</h3>
+            <h3 className="text-xl font-display font-semibold mb-3 text-foreground">Our Team</h3>
             <div className="text-muted-foreground leading-relaxed space-y-2">
               <p>FarmOS brings together domain experts from across agriculture and technology:</p>
               <p><span className="text-lg">🧑‍🌾</span> <span className="font-semibold text-foreground">Agronomists</span> — Guiding farmers toward precision cultivation.</p>
