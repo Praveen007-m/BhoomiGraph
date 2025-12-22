@@ -12,7 +12,7 @@ const Footer = () => {
                 <Leaf className="w-5 h-5 text-primary-foreground" />
               </div>
               <span className="text-lg font-display font-bold">
-                Bhoomi<span className="text-primary">Graph</span>
+                Farm<span className="text-primary">OS</span>
               </span>
             </a>
             <p className="text-sm text-muted-foreground">
@@ -48,7 +48,7 @@ const Footer = () => {
 
         <div className="border-t border-border/50 mt-8 pt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © 2025 BhoomiGraph Technologies Pvt. Ltd. | All Rights Reserved
+            © 2025 FarmOS Technologies Pvt. Ltd. | All Rights Reserved
           </p>
         </div>
       </div>

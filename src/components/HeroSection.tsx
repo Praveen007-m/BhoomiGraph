@@ -49,7 +49,7 @@ const HeroSection = () => {
             transition={{ delay: 0.4 }}
             className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed"
           >
-            BhoomiGraph turns raw agricultural data into actionable intelligence. Our integrated SaaS platform brings together farmers, FPOs, banks, insurers, and agri-enterprises to create smarter, more resilient, and profitable farms.
+            FarmOS turns raw agricultural data into actionable intelligence. Our integrated SaaS platform brings together farmers, FPOs, banks, insurers, and agri-enterprises to create smarter, more resilient, and profitable farms.
           </motion.p>
 
           {/* Buttons */}
