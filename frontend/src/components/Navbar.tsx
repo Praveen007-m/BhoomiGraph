@@ -49,6 +49,35 @@ const Navbar = () => {
     };
   }, []);
 
+  // ✅ REQUIREMENT 2: Dashboard button navigation logic
+  const handleDashboard = () => {
+    const token = localStorage.getItem("token");
+    const user = authService.getCurrentUser();
+    const role = user?.role?.toLowerCase();
+
+    if (!token) {
+      navigate("/auth");
+      return;
+    }
+
+    switch (role) {
+      case "farmer":
+        navigate("/farmer");
+        break;
+      case "admin":
+        navigate("/admin");
+        break;
+      case "pilot":
+        navigate("/pilot");
+        break;
+      case "agronomist":
+        navigate("/agronomist");
+        break;
+      default:
+        navigate("/auth");
+    }
+  };
+
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
@@ -90,8 +119,7 @@ const Navbar = () => {
 
           {/* Desktop CTA Buttons */}
           <div className="hidden md:flex items-center gap-3">
-            {/* ✅ REQUIREMENT 2: Auth State Button */}
-            {/* If NOT logged in - Show Sign In button */}
+            {/* ✅ REQUIREMENT 4: Sign In button - only show when NOT logged in */}
             {!isLoggedIn && (
               <Button
                 variant="outline"
@@ -102,34 +130,13 @@ const Navbar = () => {
               </Button>
             )}
 
-            {/* ✅ REQUIREMENT 3: Dashboard button - only show when logged in */}
-            {isLoggedIn && (
-              <Button
-                size="sm"
-                onClick={() => {
-                  const user = authService.getCurrentUser();
-                  const role = user?.role?.toLowerCase();
-                  switch (role) {
-                    case "admin":
-                      navigate("/admin");
-                      break;
-                    case "farmer":
-                      navigate("/farmer");
-                      break;
-                    case "pilot":
-                      navigate("/pilot");
-                      break;
-                    case "agronomist":
-                      navigate("/agronomist");
-                      break;
-                    default:
-                      navigate("/");
-                  }
-                }}
-              >
-                Dashboard
-              </Button>
-            )}
+            {/* ✅ REQUIREMENT 1 & 2: Dashboard button - ALWAYS visible with smart navigation */}
+            <Button
+              size="sm"
+              onClick={handleDashboard}
+            >
+              Dashboard
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -169,7 +176,7 @@ const Navbar = () => {
               ))}
 
               <div className="flex gap-3 pt-4 border-t border-border">
-                {/* ✅ REQUIREMENT 2: Auth State Button - Mobile */}
+                {/* ✅ REQUIREMENT 4: Sign In button - only show when NOT logged in - Mobile */}
                 {!isLoggedIn && (
                   <Button
                     variant="outline"
@@ -183,35 +190,16 @@ const Navbar = () => {
                   </Button>
                 )}
 
-                {/* ✅ REQUIREMENT 3: Dashboard button - Mobile */}
-                {isLoggedIn && (
-                  <Button
-                    className="flex-1"
-                    onClick={() => {
-                      const user = authService.getCurrentUser();
-                      const role = user?.role?.toLowerCase();
-                      switch (role) {
-                        case "admin":
-                          navigate("/admin");
-                          break;
-                        case "farmer":
-                          navigate("/farmer");
-                          break;
-                        case "pilot":
-                          navigate("/pilot");
-                          break;
-                        case "agronomist":
-                          navigate("/agronomist");
-                          break;
-                        default:
-                          navigate("/");
-                      }
-                      setIsOpen(false);
-                    }}
-                  >
-                    Dashboard
-                  </Button>
-                )}
+                {/* ✅ REQUIREMENT 1 & 2: Dashboard button - ALWAYS visible with smart navigation - Mobile */}
+                <Button
+                  className="flex-1"
+                  onClick={() => {
+                    handleDashboard();
+                    setIsOpen(false);
+                  }}
+                >
+                  Dashboard
+                </Button>
               </div>
 
             </div>

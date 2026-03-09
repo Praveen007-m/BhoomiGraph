@@ -261,3 +261,12 @@
 2026-03-09 19:13:00:130 [35mhttp[39m: [35mGET /api/farmer/dashboard 304 - - 91.836 ms[39m
 2026-03-09 19:13:32:1332 [35mhttp[39m: [35mGET /api/wallet 304 - - 177.426 ms[39m
 2026-03-09 19:13:34:1334 [35mhttp[39m: [35mGET /api/farmer/dashboard 304 - - 51.212 ms[39m
+2026-03-09 19:15:27:1527 [33mwarn[39m: [33m⚠ Twilio Account SID is missing or invalid. SMS features will be simulated.[39m
+2026-03-09 19:15:27:1527 [32minfo[39m: [32m✅ Environment validation completed.[39m
+2026-03-09 19:15:30:1530 [32minfo[39m: [32m✅ Database synced.[39m
+2026-03-09 19:15:30:1530 [32minfo[39m: [32m✅ Rule Engine initialized.[39m
+2026-03-09 19:16:38:1638 [35mhttp[39m: [35mGET /api/wallet 304 - - 153.902 ms[39m
+2026-03-09 19:16:38:1638 [35mhttp[39m: [35mGET /api/farmer/dashboard 304 - - 187.207 ms[39m
+2026-03-09 19:19:34:1934 [33mwarn[39m: [33m⚠ Twilio Account SID is missing or invalid. SMS features will be simulated.[39m
+2026-03-09 19:19:34:1934 [32minfo[39m: [32m✅ Environment validation completed.[39m
+2026-03-09 19:19:36:1936 [32minfo[39m: [32m✅ Database synced.[39m

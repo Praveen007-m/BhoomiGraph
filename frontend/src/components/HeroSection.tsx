@@ -8,6 +8,41 @@ import heroImage from "@/assets/hero-farm.jpg";
 const HeroSection = () => {
   const navigate = useNavigate();
 
+  // Smart navigation to role-based dashboard
+  const handleExplorePlatform = () => {
+    const token = localStorage.getItem("token");
+    const userStr = localStorage.getItem("user");
+    
+    if (!token) {
+      navigate("/auth");
+      return;
+    }
+
+    try {
+      const user = userStr ? JSON.parse(userStr) : null;
+      const role = user?.role?.toLowerCase();
+      
+      switch (role) {
+        case "farmer":
+          navigate("/farmer");
+          break;
+        case "admin":
+          navigate("/admin");
+          break;
+        case "pilot":
+          navigate("/pilot");
+          break;
+        case "agronomist":
+          navigate("/agronomist");
+          break;
+        default:
+          navigate("/auth");
+      }
+    } catch {
+      navigate("/auth");
+    }
+  };
+
   return (
     <section
       id="home"
@@ -76,7 +111,7 @@ const HeroSection = () => {
             <Button
               variant="hero"
               size="xl"
-              onClick={() => navigate("/dashboard")}
+              onClick={handleExplorePlatform}
             >
               Explore Platform
               <ArrowRight className="w-5 h-5 ml-2" />
