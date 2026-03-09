@@ -1,0 +1,278 @@
+# BhoomiGraph – Platform Documentation
+
+**Data-Driven Agriculture SaaS Platform**
+
+---
+
+## 📑 Table of Contents
+1. [Project Overview](#1-project-overview)
+2. [System Architecture](#2-system-architecture)
+3. [User Roles](#3-user-roles)
+4. [Login Systems](#4-login-systems)
+5. [Dashboards & Home Pages](#5-dashboards--home-pages)
+6. [Core Modules Implemented](#6-core-modules-implemented)
+7. [Frontend Structure](#7-frontend-structure)
+8. [Backend Structure](#8-backend-structure)
+9. [Database Structure](#9-database-structure)
+10. [API Structure](#10-api-structure)
+11. [Security Implementation](#11-security-implementation)
+12. [Data Flow Workflows](#12-data-flow-workflows)
+13. [Current Platform Status](#13-current-platform-status)
+
+---
+
+## 1. PROJECT OVERVIEW
+
+**BhoomiGraph** is a comprehensive Data-Driven Agriculture Software as a Service (SaaS) platform designed to modernize farm management. It serves as a unified digital ecosystem connecting various stakeholders in the agricultural pipeline.
+
+**Problem it Solves:**
+Traditional farming relies heavily on manual observation and intuition. BhoomiGraph digitizes farm management by integrating Drone imagery, Satellite NDVI data, IoT sensor hardware, and expert Agronomist advice into a single, seamless platform.
+
+**Platform Goals:**
+1. Enable precision agriculture through real-time data.
+2. Provide a marketplace for Drone Pilots.
+3. Facilitate professional agronomic advisory.
+4. Scale securely and efficiently for enterprise operations. 
+
+**Target Users:**
+- **Farmers:** The primary consumers managing farms and requesting services.
+- **Drone Pilots:** Service providers executing drone mapping and spraying actions.
+- **Agronomists:** Agricultural experts providing verified advisories.
+- **Admins:** Platform operators managing the system ecosystem.
+
+---
+
+## 2. SYSTEM ARCHITECTURE
+
+BhoomiGraph relies on a modern decoupled architecture. 
+
+**Flow:**
+`Client (React)` ➔ `API Gateway / Rotuer (Express)` ➔ `Controllers/Services (Node.js)` ➔ `PostgreSQL (Sequelize)`
+
+- **Frontend Architecture:**
+  Built as a Single Page Application (SPA) using **React (TypeScript)** and **Vite**. The styling is handled by **TailwindCSS**. It relies on **React Query** for caching and state management, providing a fast and resilient user experience.
+- **Backend Architecture:**
+  A modular monolith architecture on **Node.js** and **Express**. Business logic is split among specific controllers/services.
+- **Database Layer:**
+  A **PostgreSQL** relational database. **Sequelize ORM** is used for robust migrations, strict typing, and relationship mapping.
+- **Authentication System:**
+  Stateless **JSON Web Tokens (JWT)** are utilized for API authentication, augmented by **Twilio OTP** for passwordless phone login.
+- **Role-Based Access Control (RBAC):**
+  A structural RBAC is implemented on both the frontend (via `ProtectedRoute` wrappers) and backend (via authorization middlewares) to scope privileges by user role.
+
+---
+
+## 3. USER ROLES
+
+The platform is divided into four strictly segregated operational roles:
+
+### Farmer
+- **Purpose:** Manages personal farms, monitors metrics, requests drone services, and receives advisories.
+- **Permissions:** Read/Write their own farms, Book services, Read IoT/NDVI data, Top-up Wallet.
+- **Dashboard Access:** `/farmer` (Farmer Dashboard)
+- **Available Modules:** Farm Management, Satellite NDVI Viewer, IoT Dashboard, Booking System, Reports.
+
+### Drone Pilot
+- **Purpose:** Accepts and executes farm service bookings (spraying, mapping).
+- **Permissions:** Read assigned jobs, Update job status, Upload mission metadata/images.
+- **Dashboard Access:** `/pilot` (Pilot Dashboard)
+- **Available Modules:** Jobs/Bookings, Mission Detail, Earnings.
+
+### Agronomist
+- **Purpose:** Analyzes satellite and drone data to provide scientifically valid crop advisories to farmers.
+- **Permissions:** Read assigned farms, Read farm NDVI/IoT metrics, Create/Edit advisories.
+- **Dashboard Access:** `/agronomist` (Agronomist Dashboard)
+- **Available Modules:** Assigned Farms, Advisory Publisher, Crop Issue Validation.
+
+### Admin
+- **Purpose:** Full oversight of the operational, financial, and user management ecosystem.
+- **Permissions:** Global Read/Write access (Users, Farms, Bookings, Sensors, Content).
+- **Dashboard Access:** `/admin` (Admin Dashboard)
+- **Available Modules:** User Management, Farm Approval, Sensor Provisioning, Revenue Analytics, Platform Monitoring.
+
+---
+
+## 4. LOGIN SYSTEMS
+
+The platform utilizes a robust dual-authentication model depending on the user type. 
+
+**1. Farmer Login (Passwordless & Password)**
+- **Phone OTP Flow:** Farmers can enter their mobile numbers. The backend logs the OTP (`OtpLog` model) and dispatches a Twilio SMS. Upon submission, the API verifies the OTP, marks it as used, and returns an Access/Refresh JWT.
+- **Alternate:** Farmers can also login via Email/Password.
+
+**2. Admin Login**
+- Standard Email/Password authentication. Highly secure backend password hashing (Bcrypt). Access is validated against the `ADMIN` role.
+
+**3. Drone Pilot & Agronomist Login**
+- Authentication relies heavily on Email/Password role-based access. Once logged in, the system enforces route isolation.
+
+**Complete Login Flow:**
+1. Client submits credentials to `/api/auth/login` or `/api/auth/verify-otp`.
+2. Backend validates via `authController`.
+3. If successful, Backend issues an Access Token (1d expiry) and a Refresh Token (7d expiry).
+4. Frontend `authService` commits these to `localStorage`.
+5. Frontend Router maps to the respective dashboard (e.g., `Navigate to /farmer`).
+
+---
+
+## 5. DASHBOARDS / HOME PAGES
+
+### 1. Farmer Dashboard (`/farmer`)
+- **Farms Overview:** Map or list view of registered farm boundaries.
+- **NDVI Summary:** High-level overview of crop health indices.
+- **Weather Summary:** API-driven local weather widget.
+- **IoT Status:** Live telemetry data from active farm sensors.
+- **Advisories:** Recent alerts published by agronomists.
+- **Bookings:** Status of upcoming drone missions.
+
+### 2. Drone Pilot Dashboard (`/pilot`)
+- **Assigned Tasks:** Queue of `PENDING` or `CONFIRMED` service bookings.
+- **Upload Survey Data:** Interface to upload mission completion reports.
+- **Status Updates:** Action buttons to mark missions as in-progress or completed.
+
+### 3. Agronomist Dashboard (`/agronomist`)
+- **Assigned Farms:** List of farms requiring specialized analysis.
+- **Crop Issue Validation:** Interfaces to review imagery and telemetry.
+- **Advisory Publishing:** Form to author and push recommendations to farmers.
+
+### 4. Admin Dashboard (`/admin`)
+- **User Management:** Tables to approve, block, or modify platform users.
+- **Farm Approval:** Auditing and validation of newly added geographical boundaries.
+- **Sensor Management:** IoT device provisioning and linking.
+- **Revenue Analytics:** Aggregate metrics of wallet transactions and service payments.
+- **Platform Monitoring:** General system health overrides.
+
+---
+
+## 6. CORE MODULES IMPLEMENTED
+
+- **Farm Management:** Create and edit geometrical farm plots (PostGIS/GeoJSON), tracking soil types, crop types, and sowing dates.
+- **Satellite NDVI Viewer:** Fetch and render remote sensing data (Mean NDVI, EVI, NDRE) for historical crop health tracking.
+- **Drone Mapping Module:** Connects pilots with farms, structures task allocations, and manages flight deliverables.
+- **IoT Dashboard:** Ingests and visualizes real-time field hardware telemetry via WebSockets and REST.
+- **Service Booking System:** Marketplace logic where Farmers request services and pilots fulfill them.
+- **Payment & Wallet System:** Ledger-based system (`Wallet` and `WalletTransaction` models) allowing seamless in-platform microtransactions.
+- **Advisory System:** Formalized pipeline allowing Agronomists to push actionable notifications to Farmers.
+- **Notification System:** Global alerting architecture.
+- **Admin Management:** Comprehensive CRUD operations for all database entities.
+
+---
+
+## 7. FRONTEND STRUCTURE
+
+The frontend applies a module-based architecture designed for clarity and scalability.
+
+- **Routing System:** React Router v6 mapping logic defined in [App.tsx](file:///c:/Users/prave/OneDrive/Desktop/BhoomiGraph/FarmOS/frontend/src/App.tsx).
+- **Layout Structure:** Shared `AppLayout` with scoped layouts (`AdminLayout`, `FarmerLayout`, `PilotLayout`) managing distinct sidebars and headers.
+- **Role-Based Routes:** Enforced by a `ProtectedRoute` wrapper component checking the validated state against `allowedRoles`.
+- **Shared Components:** Stored in `/src/components` containing reusable agnostic UI elements (Buttons, Tables, Forms, derived mostly from ShadcnUI).
+- **State Management:** **React Query** handles asynchronous server state (caching, deduping), supplemented by basic React Contexts.
+
+**Key Folders:**
+- `/components`: Agnostic UI layout elements.
+- `/modules`: Domain-specific containers isolating roles (`/modules/farmer`, `/modules/admin`).
+- `/pages`: Public and generic pages (Auth, Index, NotFound).
+- `/services`: Axios API interceptors and endpoint bindings.
+- `/hooks`: Custom React bindings.
+- `/contexts`: Global state providers.
+
+---
+
+## 8. BACKEND STRUCTURE
+
+The backend strictly adheres to an MVC-like Service/Controller pattern.
+
+- `controllers`: Translates HTTP requests, calls models/services, shapes responses (e.g., [authController.ts](file:///c:/Users/prave/OneDrive/Desktop/BhoomiGraph/FarmOS/backend/src/controllers/authController.ts), [farmController.ts](file:///c:/Users/prave/OneDrive/Desktop/BhoomiGraph/FarmOS/backend/src/controllers/farmController.ts)).
+- `routes`: Maps Express URL paths and HTTP verbs to middlewares and controllers (e.g., [adminRoutes.ts](file:///c:/Users/prave/OneDrive/Desktop/BhoomiGraph/FarmOS/backend/src/routes/adminRoutes.ts)).
+- `models`: Sequelize Class models mapping TypeScript definitions directly to PostgreSQL tables.
+- `middlewares`: Security hooks like `helmet`, `globalRateLimiter`, and role-based guards.
+- `services`: Extended abstraction for complex business logic, third-party hooks (Tx/IoT integrations).
+- `utils`: Helpers like Twilio integrators, Logger configurations, formatting scripts.
+- `config`: Setup for Database connections, Environmental constraints.
+
+---
+
+## 9. DATABASE STRUCTURE
+
+A robust PostgreSQL schema handled via Sequelize. Key relationships:
+
+- **users:** Core identity table. Has Many Farms, Bookings, Wallets.
+- **farms:** Geospatial boundary entity. Belongs to User. Has Many IoTDevice, DroneProject, SatelliteNDVIRecord.
+- **drone_projects / drone_surveys:** Tracks specific pilot missions against a Farm.
+- **iot_devices / iot_data:** Physical hardware and historical telemetry storage.
+- **satellite_ndvi_records:** Stored aggregates of remote sensing data per farm over time.
+- **service_bookings:** Join logic between a Farmer, a Farm, and a Pilot. Includes financial states.
+- **wallets & wallet_transactions:** Financial ledger binding user liquidity to platform consumption.
+- **advisories:** Knowledge nodes linking Agronomists to Farms.
+
+---
+
+## 10. API STRUCTURE
+
+Express routing is namespace-scoped for clarity:
+
+- **Auth APIs** (`/api/auth/*`): Login, OTP sending, OTP verification.
+- **Farm APIs** (`/api/farms/*`): CRUD for geographical farm entities.
+- **Drone APIs** (`/api/drones/*`): Handling of surveys and deliverables.
+- **IoT APIs** (`/api/iot/*`): Telemetry ingestion and device management.
+- **Booking APIs** (`/api/services/*`): Managing the booking lifecycle and pilot assignments.
+- **Wallet/Payment APIs** (`/api/wallet/*`, `/api/payments/*`): Deductions, top-ups, transaction logs.
+- **Role Scoped APIs** (`/api/admin/*`, `/api/farmer/*`, `/api/agronomist/*`): High-level endpoints tailored to specific dashboard aggregations.
+
+Request Flow: `Client` ➔ `Router Middleware` ➔ `Auth/Role Middleware` ➔ `Controller` ➔ `Sequelize Ops` ➔ `JSON Response`
+
+---
+
+## 11. SECURITY IMPLEMENTATION
+
+BhoomiGraph utilizes production-grade defensive measures:
+
+- **JWT Authentication:** Cryptographically signed tokens.
+- **Role-Based Authorization:** Strict backend middleware guarding endpoints based on user claims.
+- **Rate Limiting:** `express-rate-limit` prevents brute force and DDOS.
+- **OTP Verification:** Short-lived Twilio verification logic for passwordless authentication.
+- **Helmet:** Sets standardized secure HTTP headers natively.
+- **Bcrypt:** 10-round salted password hashing.
+- **Environment Variables:** All secrets, keys, and DB credentials isolated outside the codebase.
+- **CORS Configuration:** Strictly defined origins rejecting cross-site forgery.
+
+---
+
+## 12. DATA FLOW EXAMPLES
+
+**1. Farmer Onboarding & Farm Creation**
+1. Farmer enters mobile number ➔ receives OTP ➔ validates to create Account.
+2. Farmer navigates to "Add Farm", defining boundaries via the UI map.
+3. Payload sent to `/api/farms` ➔ Saved to DB with geometrical datatype.
+4. Farm flagged as `PENDING` until Admin approval.
+
+**2. Drone Service Booking Flow**
+1. Farmer requests spraying on an approved Farm.
+2. Order hits `/api/services` ➔ System estimates cost.
+3. Relevant funds deducted from Farmer's `Wallet`.
+4. Booking marked as `CONFIRMED`.
+5. Admin/System assigns a Pilot.
+6. Pilot sees Job on `/pilot/jobs`.
+
+**3. Agronomist Advisory Flow**
+1. Agronomist visually inspects the `Satellite NDVI` arrays.
+2. Decides that a section requires nitrogen application.
+3. Creates Advisory via `/api/agronomist/advisories`.
+4. Notification subsystem pushes an alert to the associated Farmer.
+
+---
+
+## 13. CURRENT PLATFORM STATUS
+
+- **Features Completed:**
+  - Full end-to-end authentication (OTP & JWT).
+  - RBAC structures across the system.
+  - Complete backend entity scaffolding (Wallet, Farm, IoT, NDVI, Bookings).
+  - Segregated frontend dashboards for all 4 roles.
+- **Modules in Active Development:**
+  - Automated advisory triggers via AI.
+  - WebSockets integration for instantaneous IoT telemetry.
+- **Future Roadmap:**
+  - Deep predictive analytics based on historical harvest yields.
+  - Fully Dockerized enterprise microservice splitting.
+  - CI/CD pipeline establishment.
