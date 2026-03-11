@@ -151,7 +151,7 @@ const CreateAdvisory = () => {
                             <ShieldCheck size={24} />
                         </div>
                         <p className="text-[11px] font-medium text-gray-500 leading-normal">
-                            By publishing, you confirm this advisory is based on validated <span className="text-primary font-bold">BhoomiGraph Telemetry</span> and current scientific standards.
+By publishing, you confirm this advisory is based on validated <span className="text-primary font-bold">LOEMS Telemetry</span> and current scientific standards.
                         </p>
                     </div>
 

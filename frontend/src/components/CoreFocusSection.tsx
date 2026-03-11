@@ -54,7 +54,7 @@ const CoreFocusSection = () => {
             Our Core Focus
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Building India's most trusted agri-data ecosystem through three interconnected pillars
+            Building India's most trusted digital agriculture ecosystem through three interconnected pillars
           </p>
         </motion.div>
 

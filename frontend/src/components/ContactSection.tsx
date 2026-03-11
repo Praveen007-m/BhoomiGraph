@@ -10,7 +10,7 @@ const ContactSection = () => {
     // Replace with real brochure file path later
     const link = document.createElement("a");
     link.href = "/brochure.pdf";
-    link.download = "BhoomiGraph-Brochure.pdf";
+    link.download = "LOEMS-Brochure.pdf";
     link.click();
   };
 
@@ -57,7 +57,7 @@ const ContactSection = () => {
                   <div>
                     <h4 className="font-semibold mb-1">Head Office</h4>
                     <p className="text-muted-foreground text-sm">
-                      BhoomiGraph Technologies Pvt. Ltd.<br />
+                      LOEMS Technologies Pvt. Ltd.<br />
                       Bangalore, Karnataka, India
                     </p>
                   </div>
@@ -126,7 +126,7 @@ const ContactSection = () => {
                   <div>
                     <h4 className="font-semibold">Request a Demo</h4>
                     <p className="text-sm text-muted-foreground">
-                      See BhoomiGraph in action
+                      See LOEMS in action
                     </p>
                   </div>
                 </div>

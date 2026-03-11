@@ -171,7 +171,7 @@ export const sendOtp = async (req: Request, res: Response) => {
     if (!twilioClient) {
       logger.info(`[DEV MODE] OTP for ${mobile}: ${otp}`);
     } else {
-      await sendSMS(mobile, `Your BhoomiGraph OTP is ${otp}. Valid for 5 minutes.`);
+await sendSMS(mobile, `Your LOEMS verification code is ${otp}. Valid for 5 minutes.`);
     }
 
     return res.json({

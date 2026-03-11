@@ -64,9 +64,9 @@ const AboutSection = () => {
             </div>
             <h3 className="text-xl font-display font-semibold mb-3 text-foreground">Our Story</h3>
             <div className="text-muted-foreground leading-relaxed space-y-3">
-              <p>BhoomiGraph Technologies was founded to solve one of India's deepest challenges — fragmented and underutilized agricultural data.</p>
+              <p>LOEMS was founded to solve one of India's deepest challenges — fragmented and underutilized agricultural data.</p>
               <p>Despite the availability of drones, satellites, and IoT devices, farmers and institutions rarely benefit from unified insights.</p>
-              <p>We bridge this gap by building a <span className="font-semibold text-foreground">Data Intelligence Layer</span> — connecting ground data with cloud analytics to serve farmers, banks, insurers, and policymakers alike.</p>
+              <p>We bridge this gap by building a <span className="font-semibold text-foreground">Digital Infrastructure Layer</span> — connecting ground data with cloud analytics to serve farmers, banks, insurers, and policymakers alike.</p>
             </div>
           </motion.div>
 
@@ -82,7 +82,7 @@ const AboutSection = () => {
             </div>
             <h3 className="text-xl font-display font-semibold mb-3 text-foreground">Our Team</h3>
             <div className="text-muted-foreground leading-relaxed space-y-2">
-              <p>BhoomiGraph brings together domain experts from across agriculture and technology:</p>
+              <p>LOEMS brings together domain experts from across agriculture and technology:</p>
               <p><span className="text-lg">🧑‍🌾</span> <span className="font-semibold text-foreground">Agronomists</span> — Guiding farmers toward precision cultivation.</p>
               <p><span className="text-lg">🛰️</span> <span className="font-semibold text-foreground">GIS & UAV Specialists</span> — Capturing and processing spatial data with accuracy.</p>
               <p><span className="text-lg">💻</span> <span className="font-semibold text-foreground">Software & Data Engineers</span> — Building scalable, secure SaaS infrastructure.</p>

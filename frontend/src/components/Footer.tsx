@@ -31,12 +31,12 @@ const Footer = () => {
                 <Leaf className="w-5 h-5 text-primary-foreground" />
               </div>
               <span className="text-lg font-display font-bold">
-                Bhoomi<span className="text-primary">Graph</span>
+                LOEMS
               </span>
             </div>
 
             <p className="text-sm text-white/70">
-              Farm data. Financial access. Future-ready agriculture.
+              Digital Infrastructure for Agriculture
             </p>
           </div>
 
@@ -76,7 +76,7 @@ const Footer = () => {
 
         <div className="border-t border-white/10 mt-8 pt-8 text-center">
           <p className="text-sm text-white/60">
-            © 2025 BhoomiGraph Technologies Pvt. Ltd. | All Rights Reserved
+            © 2025 LOEMS Technologies Pvt. Ltd. | All Rights Reserved
           </p>
         </div>
       </div>

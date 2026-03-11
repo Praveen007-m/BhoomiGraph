@@ -9,23 +9,18 @@ const industries = [
   },
   {
     icon: Landmark,
-    stakeholder: 'Banks & NBFCs',
+    stakeholder: 'Banks & Insurance',
     value: 'Verified data for accurate risk scoring and faster loan approvals',
   },
   {
-    icon: ShieldCheck,
-    stakeholder: 'Insurance Companies',
-    value: 'Satellite + ground data for real-time claim validation',
-  },
-  {
     icon: Building,
-    stakeholder: 'Government & CSR Bodies',
+    stakeholder: 'Government Agencies',
     value: 'Data-driven monitoring and impact assessment tools',
   },
   {
     icon: Package,
-    stakeholder: 'Agri-Businesses & Exporters',
-    value: 'Input optimization, yield traceability, and sustainability insights',
+    stakeholder: 'Buyers & Exporters',
+    value: 'Sourcing intelligence, traceability, and market connectivity',
   },
 ];
 
@@ -40,10 +35,10 @@ const IndustriesSection = () => {
           className="text-center mb-16"
         >
           <span className="inline-block px-4 py-2 rounded-full bg-primary/20 text-primary text-sm font-medium mb-4">
-            Industries We Serve
+            Who We Serve
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-            Multi-Stakeholder Value
+            LOEMS Ecosystem Partners
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Our platform creates value across the entire agricultural ecosystem

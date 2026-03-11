@@ -40,7 +40,7 @@ const WhyChooseSection = () => {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-            Why Choose <span className="text-gradient">BhoomiGraph</span>
+            Why Choose <span className="text-gradient">LOEMS</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             We combine cutting-edge technology with deep agricultural expertise to deliver solutions that transform farming operations.

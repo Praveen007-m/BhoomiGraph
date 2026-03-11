@@ -212,7 +212,7 @@ export default function Auth() {
             <Leaf className="w-5 h-5 text-primary-foreground" />
           </div>
           <span className="text-xl font-bold">
-            Bhoomi<span className="text-primary">Graph</span>
+            LOEMS
           </span>
         </button>
       </div>

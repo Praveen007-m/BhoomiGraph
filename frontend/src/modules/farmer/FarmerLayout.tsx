@@ -68,7 +68,7 @@ const FarmerLayout = () => {
                                 <Sprout size={24} />
                             </div>
                             <div>
-                                <h2 className="font-bold text-slate-900 tracking-tight">BhoomiGraph</h2>
+                                <h2 className="font-bold text-slate-900 tracking-tight">LOEMS</h2>
                                 <p className="text-[10px] text-green-600 font-bold uppercase tracking-wider">Farmer Panel</p>
                             </div>
                         </div>

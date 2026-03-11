@@ -5,6 +5,7 @@ import app from './app';
 import sequelize from './config/db';
 import { initRuleEngine } from './services/ruleEngine';
 import { validateEnv } from './config/validateEnv';
+import { createIndexes } from './config/indexes';
 import logger from './utils/logger';
 
 
@@ -23,12 +24,17 @@ const startServer = async () => {
         await sequelize.sync({ alter: true });
         logger.info('✅ Database synced.');
 
+        // Create database indexes for performance
+        await createIndexes(sequelize);
+
         // Initialize background workers
         initRuleEngine();
         logger.info('✅ Rule Engine initialized.');
 
         app.listen(PORT, () => {
             console.log(`🚀 Server running on port ${PORT}`);
+            console.log(`📊 Health check: http://localhost:${PORT}/health`);
+            console.log(`📊 Status: http://localhost:${PORT}/status`);
         });
     } catch (error) {
         console.error('❌ Unable to connect to the database:', error);

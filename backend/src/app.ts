@@ -5,6 +5,7 @@ import morgan from 'morgan';
 import { json, urlencoded } from 'express';
 import logger from './utils/logger';
 import { globalRateLimiter } from './middlewares/rateLimiter';
+import { ApiResponse } from './utils/apiResponse';
 
 import authRoutes from './routes/authRoutes';
 import farmRoutes from './routes/farmRoutes';
@@ -21,13 +22,24 @@ import farmerRoutes from './modules/farmer/routes/farmerRoutes';
 import pilotRoutes from './modules/pilot/routes/pilotRoutes';
 import agronomistRoutes from './modules/agronomist/routes/agronomistRoutes';
 import notificationRoutes from './modules/notification/routes/notificationRoutes';
+import sequelize from './config/db';
 
 const app = express();
 
 // =======================
 // 🔐 Middleware
 // =======================
-app.use(helmet());
+app.use(helmet({
+    contentSecurityPolicy: {
+        directives: {
+            defaultSrc: ["'self'"],
+            styleSrc: ["'self'", "'unsafe-inline'"],
+            scriptSrc: ["'self'"],
+            imgSrc: ["'self'", "data:", "https:"],
+        },
+    },
+    crossOriginEmbedderPolicy: false,
+}));
 app.use(globalRateLimiter);
 
 app.use(cors({
@@ -37,7 +49,9 @@ app.use(cors({
         "http://localhost:5175",
         "http://localhost:5176"
     ],
-    credentials: true
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms', {
@@ -45,14 +59,63 @@ app.use(morgan(':method :url :status :res[content-length] - :response-time ms', 
         write: (message) => logger.http(message.trim()),
     },
 }));
-app.use(json());
-app.use(urlencoded({ extended: true }));
+app.use(json({ limit: '10mb' }));
+app.use(urlencoded({ extended: true, limit: '10mb' }));
 
 // =======================
-// 🚀 Health Check
+// 🚀 Health Check Endpoints
 // =======================
 app.get('/', (req, res) => {
-    res.send('BhoomiGraph Backend API is Running 🚀');
+    res.send('LOEMS API is Running 🚀');
+});
+
+// Basic health check
+app.get('/health', (req, res) => {
+    return ApiResponse.success(res, 'Service is healthy', {
+        status: 'healthy',
+        timestamp: new Date().toISOString(),
+        uptime: process.uptime()
+    });
+});
+
+// Detailed system status
+app.get('/status', async (req, res) => {
+    try {
+        // Check database connection
+        await sequelize.authenticate();
+        const dbStatus = 'connected';
+        
+        return ApiResponse.success(res, 'System status', {
+            status: 'operational',
+            timestamp: new Date().toISOString(),
+            uptime: process.uptime(),
+            memory: {
+                used: Math.round(process.memoryUsage().heapUsed / 1024 / 1024) + ' MB',
+                total: Math.round(process.memoryUsage().heapTotal / 1024 / 1024) + ' MB'
+            },
+            database: {
+                status: dbStatus,
+                dialect: 'postgresql'
+            },
+            environment: process.env.NODE_ENV || 'development',
+            version: process.env.APP_VERSION || '1.0.0'
+        });
+    } catch (error: any) {
+        logger.error(`Status check failed: ${error.message}`);
+        return ApiResponse.error(res, 'System degraded', 503, [{
+            field: 'database',
+            message: 'Database connection failed'
+        }]);
+    }
+});
+
+// API version endpoint
+app.get('/api/version', (req, res) => {
+    return ApiResponse.success(res, 'API Version', {
+        version: '1.0.0',
+        apiName: 'LOEMS API',
+        buildDate: new Date().toISOString()
+    });
 });
 
 // =======================

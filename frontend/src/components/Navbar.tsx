@@ -9,6 +9,7 @@ const navLinks = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Platform", href: "#platform" },
+  { label: "Architecture", href: "#architecture" },
   { label: "Industries", href: "#industries" },
   { label: "Impact", href: "#impact" },
   { label: "Contact", href: "#contact" },
@@ -100,7 +101,7 @@ const Navbar = () => {
               <Leaf className="w-6 h-6 text-primary-foreground" />
             </div>
             <span className="text-xl font-display font-bold">
-              Bhoomi<span className="text-primary">Graph</span>
+              LOEMS
             </span>
           </div>
 

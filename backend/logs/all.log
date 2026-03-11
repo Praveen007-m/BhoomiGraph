@@ -270,3 +270,122 @@
 2026-03-09 19:19:34:1934 [33mwarn[39m: [33m⚠ Twilio Account SID is missing or invalid. SMS features will be simulated.[39m
 2026-03-09 19:19:34:1934 [32minfo[39m: [32m✅ Environment validation completed.[39m
 2026-03-09 19:19:36:1936 [32minfo[39m: [32m✅ Database synced.[39m
+2026-03-09 19:22:15:2215 [33mwarn[39m: [33m⚠ Twilio Account SID is missing or invalid. SMS features will be simulated.[39m
+2026-03-09 19:22:15:2215 [32minfo[39m: [32m✅ Environment validation completed.[39m
+2026-03-09 19:22:17:2217 [32minfo[39m: [32m✅ Database synced.[39m
+2026-03-09 19:22:17:2217 [32minfo[39m: [32m✅ Rule Engine initialized.[39m
+2026-03-09 19:22:21:2221 [35mhttp[39m: [35mGET /api/wallet 304 - - 49.402 ms[39m
+2026-03-09 19:22:21:2221 [35mhttp[39m: [35mGET /api/farmer/dashboard 304 - - 49.137 ms[39m
+2026-03-09 19:22:24:2224 [35mhttp[39m: [35mGET /api/wallet 304 - - 7.567 ms[39m
+2026-03-09 19:22:24:2224 [35mhttp[39m: [35mGET /api/farmer/dashboard 304 - - 23.293 ms[39m
+2026-03-09 19:22:34:2234 [35mhttp[39m: [35mGET /api/farmer/dashboard 304 - - 24.166 ms[39m
+2026-03-09 19:22:42:2242 [35mhttp[39m: [35mGET /api/farmer/dashboard 304 - - 33.839 ms[39m
+2026-03-09 19:23:38:2338 [35mhttp[39m: [35mGET /api/wallet 401 53 - 1.699 ms[39m
+2026-03-10 18:13:38:1338 [33mwarn[39m: [33m⚠ Twilio Account SID is missing or invalid. SMS features will be simulated.[39m
+2026-03-10 18:13:38:1338 [32minfo[39m: [32m✅ Environment validation completed.[39m
+2026-03-10 18:13:43:1343 [32minfo[39m: [32m✅ Database synced.[39m
+2026-03-10 18:13:43:1343 [32minfo[39m: [32m✅ Rule Engine initialized.[39m
+2026-03-10 18:41:20:4120 [35mhttp[39m: [35mPOST /api/auth/login 200 585 - 729.799 ms[39m
+2026-03-10 18:41:20:4120 [35mhttp[39m: [35mGET /api/farmer/dashboard 304 - - 155.709 ms[39m
+2026-03-10 20:36:42:3642 [35mhttp[39m: [35mGET /api/farmer/dashboard 304 - - 546.293 ms[39m
+2026-03-10 20:36:50:3650 [35mhttp[39m: [35mGET /api/farmer/farms 304 - - 1111.663 ms[39m
+2026-03-10 20:37:34:3734 [33mwarn[39m: [33m⚠ Twilio Account SID is missing or invalid. SMS features will be simulated.[39m
+2026-03-10 20:37:34:3734 [32minfo[39m: [32m✅ Environment validation completed.[39m
+2026-03-10 20:37:37:3737 [32minfo[39m: [32m✅ Database synced.[39m
+2026-03-10 20:37:37:3737 [32minfo[39m: [32m✅ Rule Engine initialized.[39m
+2026-03-10 20:38:28:3828 [33mwarn[39m: [33m⚠ Twilio Account SID is missing or invalid. SMS features will be simulated.[39m
+2026-03-10 20:38:28:3828 [32minfo[39m: [32m✅ Environment validation completed.[39m
+2026-03-10 20:38:31:3831 [32minfo[39m: [32m✅ Database synced.[39m
+2026-03-10 20:38:31:3831 [32minfo[39m: [32m✅ Rule Engine initialized.[39m
+2026-03-10 20:51:45:5145 [33mwarn[39m: [33m⚠ Twilio Account SID is missing or invalid. SMS features will be simulated.[39m
+2026-03-10 20:51:45:5145 [32minfo[39m: [32m✅ Environment validation completed.[39m
+2026-03-10 20:51:48:5148 [32minfo[39m: [32m✅ Database synced.[39m
+2026-03-10 20:51:48:5148 [32minfo[39m: [32m✅ Rule Engine initialized.[39m
+2026-03-10 20:58:27:5827 [35mhttp[39m: [35mGET /api/wallet 304 - - 493.026 ms[39m
+2026-03-10 21:33:47:3347 [33mwarn[39m: [33m⚠ Twilio Account SID is missing or invalid. SMS features will be simulated.[39m
+2026-03-10 21:33:47:3347 [32minfo[39m: [32m✅ Environment validation completed.[39m
+2026-03-10 21:33:52:3352 [32minfo[39m: [32m✅ Database synced.[39m
+2026-03-10 21:33:52:3352 [32minfo[39m: [32m✅ Rule Engine initialized.[39m
+2026-03-10 21:34:16:3416 [33mwarn[39m: [33m⚠ Twilio Account SID is missing or invalid. SMS features will be simulated.[39m
+2026-03-10 21:34:16:3416 [32minfo[39m: [32m✅ Environment validation completed.[39m
+2026-03-10 21:34:20:3420 [32minfo[39m: [32m✅ Database synced.[39m
+2026-03-10 21:34:20:3420 [32minfo[39m: [32m✅ Rule Engine initialized.[39m
+2026-03-10 21:34:34:3434 [33mwarn[39m: [33m⚠ Twilio Account SID is missing or invalid. SMS features will be simulated.[39m
+2026-03-10 21:34:34:3434 [32minfo[39m: [32m✅ Environment validation completed.[39m
+2026-03-10 21:34:38:3438 [32minfo[39m: [32m✅ Database synced.[39m
+2026-03-10 21:34:38:3438 [32minfo[39m: [32m✅ Rule Engine initialized.[39m
+2026-03-10 21:34:48:3448 [33mwarn[39m: [33m⚠ Twilio Account SID is missing or invalid. SMS features will be simulated.[39m
+2026-03-10 21:34:48:3448 [32minfo[39m: [32m✅ Environment validation completed.[39m
+2026-03-10 21:34:57:3457 [33mwarn[39m: [33m⚠ Twilio Account SID is missing or invalid. SMS features will be simulated.[39m
+2026-03-10 21:34:57:3457 [32minfo[39m: [32m✅ Environment validation completed.[39m
+2026-03-10 21:35:07:357 [33mwarn[39m: [33m⚠ Twilio Account SID is missing or invalid. SMS features will be simulated.[39m
+2026-03-10 21:35:07:357 [32minfo[39m: [32m✅ Environment validation completed.[39m
+2026-03-10 21:35:21:3521 [33mwarn[39m: [33m⚠ Twilio Account SID is missing or invalid. SMS features will be simulated.[39m
+2026-03-10 21:35:21:3521 [32minfo[39m: [32m✅ Environment validation completed.[39m
+2026-03-10 21:35:25:3525 [32minfo[39m: [32m✅ Database synced.[39m
+2026-03-10 21:35:25:3525 [32minfo[39m: [32m✅ Rule Engine initialized.[39m
+2026-03-10 21:35:43:3543 [33mwarn[39m: [33m⚠ Twilio Account SID is missing or invalid. SMS features will be simulated.[39m
+2026-03-10 21:35:43:3543 [32minfo[39m: [32m✅ Environment validation completed.[39m
+2026-03-10 21:35:46:3546 [32minfo[39m: [32m✅ Database synced.[39m
+2026-03-10 21:35:46:3546 [32minfo[39m: [32m✅ Rule Engine initialized.[39m
+2026-03-10 21:36:03:363 [33mwarn[39m: [33m⚠ Twilio Account SID is missing or invalid. SMS features will be simulated.[39m
+2026-03-10 21:36:03:363 [32minfo[39m: [32m✅ Environment validation completed.[39m
+2026-03-10 21:36:12:3612 [33mwarn[39m: [33m⚠ Twilio Account SID is missing or invalid. SMS features will be simulated.[39m
+2026-03-10 21:36:12:3612 [32minfo[39m: [32m✅ Environment validation completed.[39m
+2026-03-10 21:36:15:3615 [32minfo[39m: [32m✅ Database synced.[39m
+2026-03-10 21:36:15:3615 [32minfo[39m: [32m✅ Rule Engine initialized.[39m
+2026-03-10 21:36:29:3629 [33mwarn[39m: [33m⚠ Twilio Account SID is missing or invalid. SMS features will be simulated.[39m
+2026-03-10 21:36:29:3629 [32minfo[39m: [32m✅ Environment validation completed.[39m
+2026-03-10 21:36:32:3632 [32minfo[39m: [32m✅ Database synced.[39m
+2026-03-10 21:36:32:3632 [32minfo[39m: [32m✅ Rule Engine initialized.[39m
+2026-03-10 21:37:08:378 [33mwarn[39m: [33m⚠ Twilio Account SID is missing or invalid. SMS features will be simulated.[39m
+2026-03-10 21:37:08:378 [32minfo[39m: [32m✅ Environment validation completed.[39m
+2026-03-10 21:37:17:3717 [33mwarn[39m: [33m⚠ Twilio Account SID is missing or invalid. SMS features will be simulated.[39m
+2026-03-10 21:37:17:3717 [32minfo[39m: [32m✅ Environment validation completed.[39m
+2026-03-10 21:37:20:3720 [32minfo[39m: [32m✅ Database synced.[39m
+2026-03-10 21:37:20:3720 [32minfo[39m: [32m✅ Rule Engine initialized.[39m
+2026-03-10 21:37:36:3736 [33mwarn[39m: [33m⚠ Twilio Account SID is missing or invalid. SMS features will be simulated.[39m
+2026-03-10 21:37:36:3736 [32minfo[39m: [32m✅ Environment validation completed.[39m
+2026-03-10 21:37:39:3739 [32minfo[39m: [32m✅ Database synced.[39m
+2026-03-10 21:37:39:3739 [32minfo[39m: [32m✅ Rule Engine initialized.[39m
+2026-03-10 21:37:54:3754 [33mwarn[39m: [33m⚠ Twilio Account SID is missing or invalid. SMS features will be simulated.[39m
+2026-03-10 21:37:54:3754 [32minfo[39m: [32m✅ Environment validation completed.[39m
+2026-03-10 21:37:57:3757 [32minfo[39m: [32m✅ Database synced.[39m
+2026-03-10 21:37:57:3757 [32minfo[39m: [32m✅ Rule Engine initialized.[39m
+2026-03-10 21:38:18:3818 [33mwarn[39m: [33m⚠ Twilio Account SID is missing or invalid. SMS features will be simulated.[39m
+2026-03-10 21:38:18:3818 [32minfo[39m: [32m✅ Environment validation completed.[39m
+2026-03-10 21:38:33:3833 [33mwarn[39m: [33m⚠ Twilio Account SID is missing or invalid. SMS features will be simulated.[39m
+2026-03-10 21:38:33:3833 [32minfo[39m: [32m✅ Environment validation completed.[39m
+2026-03-10 21:38:37:3837 [32minfo[39m: [32m✅ Database synced.[39m
+2026-03-10 21:38:37:3837 [32minfo[39m: [32m✅ Rule Engine initialized.[39m
+2026-03-10 21:38:46:3846 [33mwarn[39m: [33m⚠ Twilio Account SID is missing or invalid. SMS features will be simulated.[39m
+2026-03-10 21:38:46:3846 [32minfo[39m: [32m✅ Environment validation completed.[39m
+2026-03-10 21:38:49:3849 [32minfo[39m: [32m✅ Database synced.[39m
+2026-03-10 21:38:49:3849 [32minfo[39m: [32m✅ Rule Engine initialized.[39m
+2026-03-10 21:39:25:3925 [33mwarn[39m: [33m⚠ Twilio Account SID is missing or invalid. SMS features will be simulated.[39m
+2026-03-10 21:39:25:3925 [32minfo[39m: [32m✅ Environment validation completed.[39m
+2026-03-10 21:39:29:3929 [32minfo[39m: [32m✅ Database synced.[39m
+2026-03-10 21:39:29:3929 [32minfo[39m: [32mCreating database indexes...[39m
+2026-03-10 21:39:29:3929 [31merror[39m: [31m❌ Error creating indexes: column "deleted_at" does not exist[39m
+2026-03-10 21:39:29:3929 [32minfo[39m: [32m✅ Rule Engine initialized.[39m
+2026-03-10 21:40:59:4059 [33mwarn[39m: [33m⚠️ AWS variables not configured: AWS_BUCKET. File uploads will be simulated.[39m
+2026-03-10 21:40:59:4059 [33mwarn[39m: [33m⚠️ Payment variables not configured: RAZORPAY_KEY, RAZORPAY_SECRET. Payment features will be unavailable.[39m
+2026-03-10 21:40:59:4059 [33mwarn[39m: [33m⚠️ JWT_SECRET is less than 32 characters. This is not recommended for production.[39m
+2026-03-10 21:40:59:4059 [33mwarn[39m: [33m⚠️ DB_HOST does not look like a valid hostname.[39m
+2026-03-10 21:40:59:4059 [32minfo[39m: [32m✅ All critical environment variables configured[39m
+2026-03-10 21:40:59:4059 [32minfo[39m: [32m⚠️ 4 optional service(s) not configured (see warnings above)[39m
+2026-03-10 21:40:59:4059 [32minfo[39m: [32m📋 Environment: development[39m
+2026-03-10 21:40:59:4059 [32minfo[39m: [32m📋 Server Port: 5000[39m
+2026-03-10 21:41:02:412 [32minfo[39m: [32m✅ Database synced.[39m
+2026-03-10 21:41:02:412 [32minfo[39m: [32mCreating database indexes...[39m
+2026-03-10 21:41:02:412 [31merror[39m: [31m❌ Error creating indexes: column "deleted_at" does not exist[39m
+2026-03-10 21:41:02:412 [32minfo[39m: [32m✅ Rule Engine initialized.[39m
+2026-03-10 22:00:44:044 [35mhttp[39m: [35mGET /api/wallet 304 - - 304.127 ms[39m
+2026-03-10 22:01:17:117 [35mhttp[39m: [35mGET /api/wallet 304 - - 129.944 ms[39m
+2026-03-10 22:01:19:119 [35mhttp[39m: [35mGET /api/farmer/dashboard 304 - - 100.945 ms[39m
+2026-03-10 22:01:28:128 [35mhttp[39m: [35mGET /api/wallet 304 - - 10.391 ms[39m
+2026-03-10 22:01:29:129 [35mhttp[39m: [35mGET /api/wallet 304 - - 8.565 ms[39m
+2026-03-10 22:02:57:257 [35mhttp[39m: [35mGET /api/wallet 304 - - 149.982 ms[39m
+2026-03-10 22:06:04:64 [35mhttp[39m: [35mGET /api/wallet 304 - - 144.855 ms[39m
+2026-03-10 22:06:35:635 [35mhttp[39m: [35mGET /api/wallet 304 - - 254.611 ms[39m
+2026-03-10 22:07:16:716 [35mhttp[39m: [35mGET /api/wallet 304 - - 124.296 ms[39m

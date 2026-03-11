@@ -38,7 +38,7 @@ export default function Payments() {
                 key: key || import.meta.env.VITE_RAZORPAY_KEY_ID || "YOUR_TEST_KEY_ID", // Fallback if backend doesn't send key
                 amount: Number(amount) * 100,
                 currency: currency,
-                name: "BhoomiGraph",
+name: "LOEMS",
                 description: "Wallet Top-up",
                 order_id: order_id,
                 handler: async function (response: any) {

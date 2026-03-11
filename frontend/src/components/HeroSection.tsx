@@ -71,7 +71,7 @@ const HeroSection = () => {
           >
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             <span className="text-sm font-medium text-primary">
-              AI-Powered Precision Agriculture
+              Digital Infrastructure for Agriculture
             </span>
           </motion.div>
 
@@ -82,10 +82,12 @@ const HeroSection = () => {
             transition={{ delay: 0.3 }}
             className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight mb-6"
           >
-            Empowering Every Acre with{" "}
+            Building the{" "}
             <span className="text-gradient">
-              Data-Driven Intelligence
+              Digital Infrastructure
             </span>
+            <br />
+            for Modern Agriculture
           </motion.h1>
 
           {/* Subtext */}
@@ -95,10 +97,8 @@ const HeroSection = () => {
             transition={{ delay: 0.4 }}
             className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed"
           >
-            BhoomiGraph turns raw agricultural data into actionable intelligence.
-            Our integrated SaaS platform brings together farmers, FPOs,
-            banks, insurers, and agri-enterprises to create smarter,
-            more resilient, and profitable farms.
+            From verified land to intelligent farm operations and trusted market access, 
+            LOEMS transforms farms into digital, finance-ready assets.
           </motion.p>
 
           {/* Buttons */}

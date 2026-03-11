@@ -1,7 +1,7 @@
 {
-    "name": "bhoomigraph-backend",
+    "name": "loems-backend",
     "version": "1.0.0",
-    "description": "Backend for BhoomiGraph Digital Farm Intelligence Platform",
+    "description": "LOEMS backend – Digital Infrastructure Platform for Agriculture",
     "main": "dist/server.js",
     "scripts": {
         "start": "node dist/server.js",

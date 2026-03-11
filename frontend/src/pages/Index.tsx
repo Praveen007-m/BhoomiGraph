@@ -4,6 +4,7 @@ import CoreFocusSection from '@/components/CoreFocusSection';
 import WhyChooseSection from '@/components/WhyChooseSection';
 import AboutSection from '@/components/AboutSection';
 import PlatformSection from '@/components/PlatformSection';
+import LOEMSArchitectureSection from '@/components/LOEMSArchitectureSection';
 import IndustriesSection from '@/components/IndustriesSection';
 import RevenueModelSection from '@/components/RevenueModelSection';
 import ImpactSection from '@/components/ImpactSection';
@@ -20,6 +21,7 @@ const Index = () => {
         <WhyChooseSection />
         <AboutSection />
         <PlatformSection />
+        <LOEMSArchitectureSection />
         <IndustriesSection />
         <RevenueModelSection />
         <ImpactSection />
