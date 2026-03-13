@@ -6,9 +6,10 @@
 
   "scripts": {
     "build": "tsc",
-    "start": "node dist/server.js",
+    "start": "npm run build && node dist/server.js",
     "dev": "nodemon src/server.ts",
-    "lint": "eslint . --ext .ts"
+    "lint": "eslint . --ext .ts",
+    "prod": "npm run build && npm start"
   },
 
   "engines": {
@@ -42,7 +43,8 @@
     "socket.io": "^4.7.4",
     "togeojson": "^0.16.0",
     "twilio": "^4.22.0",
-    "winston": "^3.11.0"
+    "winston": "^3.11.0",
+    "typescript": "^5.3.3"
   },
 
   "devDependencies": {
@@ -61,7 +63,7 @@
     "@types/uuid": "^9.0.8",
     "@types/validator": "^13.11.9",
     "nodemon": "^3.0.3",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.3.3"
+    "ts-node": "^10.9.2"
   }
 }
+
