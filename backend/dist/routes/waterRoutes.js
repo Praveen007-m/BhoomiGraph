@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const waterResourceController_1 = require("../controllers/waterResourceController");
+const authMiddleware_1 = require("../middlewares/authMiddleware");
+const authorizeMiddleware_1 = require("../middlewares/authorizeMiddleware");
+const router = (0, express_1.Router)();
+router.use(authMiddleware_1.authenticate);
+router.get('/', (0, authorizeMiddleware_1.authorize)(['farmer', 'admin', 'agronomist']), waterResourceController_1.getWaterResources);
+router.post('/', (0, authorizeMiddleware_1.authorize)(['farmer']), waterResourceController_1.createWaterResource);
+router.patch('/:id/level', (0, authorizeMiddleware_1.authorize)(['farmer']), waterResourceController_1.updateWaterLevel);
+exports.default = router;
