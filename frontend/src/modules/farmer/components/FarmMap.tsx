@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, FeatureGroup, Marker, Popup } from 'react-leaf
 import { EditControl } from "react-leaflet-draw";
 import { useFarmerFarms } from '../hooks/useFarmer';
 import axios from 'axios';
-const API_URL = import.meta.env.VITE_API_URL;
+const API_URL = import.meta.env.VITE_API_URL/api;
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-draw/dist/leaflet.draw.css';
 import L from 'leaflet';
