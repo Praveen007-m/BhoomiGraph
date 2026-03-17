@@ -47,7 +47,7 @@ export default function Weather() {
         setWeather(null);
 
         const res = await axios.get(
-          `http://localhost:5000/api/weather/${selectedFarmId}`
+          `https://loement-backend.onrender.com/api/weather/${selectedFarmId}`
         );
 
         setWeather(res.data);
