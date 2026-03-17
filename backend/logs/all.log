@@ -389,3 +389,13 @@
 2026-03-10 22:06:04:64 [35mhttp[39m: [35mGET /api/wallet 304 - - 144.855 ms[39m
 2026-03-10 22:06:35:635 [35mhttp[39m: [35mGET /api/wallet 304 - - 254.611 ms[39m
 2026-03-10 22:07:16:716 [35mhttp[39m: [35mGET /api/wallet 304 - - 124.296 ms[39m
+2026-03-17 16:23:34:2334 [33mwarn[39m: [33m⚠️ AWS variables not configured: AWS_BUCKET. File uploads will be simulated.[39m
+2026-03-17 16:23:34:2334 [33mwarn[39m: [33m⚠️ Payment variables not configured: RAZORPAY_KEY, RAZORPAY_SECRET. Payment features will be unavailable.[39m
+2026-03-17 16:23:56:2356 [33mwarn[39m: [33m⚠️ AWS variables not configured: AWS_BUCKET. File uploads will be simulated.[39m
+2026-03-17 16:23:56:2356 [33mwarn[39m: [33m⚠️ Payment variables not configured: RAZORPAY_KEY, RAZORPAY_SECRET. Payment features will be unavailable.[39m
+2026-03-17 17:03:49:349 [33mwarn[39m: [33m⚠️ AWS variables not configured: AWS_BUCKET. File uploads will be simulated.[39m
+2026-03-17 17:03:49:349 [33mwarn[39m: [33m⚠️ Payment variables not configured: RAZORPAY_KEY, RAZORPAY_SECRET. Payment features will be unavailable.[39m
+2026-03-17 17:04:12:412 [33mwarn[39m: [33m⚠️ AWS variables not configured: AWS_BUCKET. File uploads will be simulated.[39m
+2026-03-17 17:04:12:412 [33mwarn[39m: [33m⚠️ Payment variables not configured: RAZORPAY_KEY, RAZORPAY_SECRET. Payment features will be unavailable.[39m
+2026-03-17 20:58:29:5829 [33mwarn[39m: [33m⚠️ AWS variables not configured: AWS_BUCKET. File uploads will be simulated.[39m
+2026-03-17 20:58:29:5829 [33mwarn[39m: [33m⚠️ Payment variables not configured: RAZORPAY_KEY, RAZORPAY_SECRET. Payment features will be unavailable.[39m

@@ -20,7 +20,7 @@ const Index = () => {
         <CoreFocusSection />
         <WhyChooseSection />
         <AboutSection />
-        <PlatformSection />
+        {/* <PlatformSection /> */}
         <LOEMSArchitectureSection />
         <IndustriesSection />
         <RevenueModelSection />

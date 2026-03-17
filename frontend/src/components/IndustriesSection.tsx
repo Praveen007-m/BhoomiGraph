@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Tractor, Landmark, ShieldCheck, Building, Package } from 'lucide-react';
+import { Tractor, Landmark, ShieldCheck, Building, Package, Briefcase } from 'lucide-react';
 
 const industries = [
   {
@@ -21,6 +21,11 @@ const industries = [
     icon: Package,
     stakeholder: 'Buyers & Exporters',
     value: 'Sourcing intelligence, traceability, and market connectivity',
+  },
+  {
+    icon: Briefcase,
+    stakeholder: 'Corporates',
+    value: 'ESG compliance, supply chain transparency, and rural market access',
   },
 ];
 

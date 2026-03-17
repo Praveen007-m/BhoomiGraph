@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Leaf } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { authService } from "@/services/auth";
@@ -8,8 +8,8 @@ import { authService } from "@/services/auth";
 const navLinks = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
-  { label: "Platform", href: "#platform" },
-  { label: "Architecture", href: "#architecture" },
+  // { label: "Platform", href: "#platform" },
+  { label: "Platform Architecture", href: "#architecture" },
   { label: "Industries", href: "#industries" },
   { label: "Impact", href: "#impact" },
   { label: "Contact", href: "#contact" },
@@ -97,12 +97,19 @@ const Navbar = () => {
             onClick={() => navigate("/")}
             className="flex items-center gap-2 group cursor-pointer"
           >
-            <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center shadow-md shadow-primary/20">
-              <Leaf className="w-6 h-6 text-primary-foreground" />
+            <img
+              src="/logo.png"
+              alt="LOEMS Logo"
+              className="h-10 w-auto object-contain"
+            />
+            <div className="flex flex-col leading-tight">
+              <span className="text-xl font-display font-bold tracking-wide">
+                LOEM'S
+              </span>
+              <span className="text-[10px] text-muted-foreground font-medium tracking-wide hidden md:block">
+                Land · Output · Earnings · Market · Support
+              </span>
             </div>
-            <span className="text-xl font-display font-bold">
-              LOEMS
-            </span>
           </div>
 
           {/* Desktop Navigation */}
@@ -132,12 +139,12 @@ const Navbar = () => {
             )}
 
             {/* ✅ REQUIREMENT 1 & 2: Dashboard button - ALWAYS visible with smart navigation */}
-            <Button
+            {/* <Button
               size="sm"
               onClick={handleDashboard}
             >
               Dashboard
-            </Button>
+            </Button> */}
           </div>
 
           {/* Mobile Menu Button */}

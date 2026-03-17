@@ -74,7 +74,7 @@ const WhyChooseSection = () => {
           viewport={{ once: true }}
           className="relative max-w-3xl mx-auto"
         >
-          <div className="card-gradient rounded-3xl p-8 border border-border/50">
+          {/* <div className="card-gradient rounded-3xl p-8 border border-border/50">
             <div className="flex items-center justify-center gap-3 mb-6">
               <BadgeCheck className="w-6 h-6 text-primary" />
               <span className="font-display font-semibold">Trusted By Industry Leaders</span>
@@ -92,7 +92,7 @@ const WhyChooseSection = () => {
             <p className="text-sm text-muted-foreground mt-6 text-center">
               Government programs, FPOs, and financial partners
             </p>
-          </div>
+          </div> */}
           {/* Decorative elements */}
           <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/10 rounded-full blur-2xl" />
           <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-secondary/10 rounded-full blur-2xl" />

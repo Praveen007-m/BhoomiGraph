@@ -1,43 +1,48 @@
 import { motion } from "framer-motion";
-import { Satellite, Wheat, CreditCard } from "lucide-react";
+import { Building2, Cpu, ShoppingCart } from "lucide-react";
 
 const focusAreas = [
   {
-    icon: Satellite,
-    title: "Farm Data Intelligence",
-    description:
-      "Unified data from drones, satellites, and sensors — processed into high-resolution insights for precision agriculture.",
+    icon: Building2,
+    title: "Digital Farm Infrastructure",
+    bullets: [
+      "Satellite & drone mapping",
+      "GIS boundary validation",
+      "Crop monitoring",
+      "Soil intelligence",
+      "Digital Farm Passport",
+    ],
     color: "primary",
   },
   {
-    icon: Wheat,
-    title: "Agronomy & Crop Advisory",
-    description:
-      "Personalized recommendations from our agronomy engine to improve yield, optimize inputs, and build climate resilience.",
+    icon: Cpu,
+    title: "Intelligent Farm Operations",
+    bullets: [
+      "AI crop monitoring",
+      "Pest & disease alerts",
+      "Weather advisory",
+      "Yield forecasting",
+      "Farm mechanization",
+    ],
     color: "accent",
   },
   {
-    icon: CreditCard,
-    title: "Financial & Insurance Access",
-    description:
-      "Verified data powering instant access to loans, credit, and crop insurance.",
+    icon: ShoppingCart,
+    title: "Connected Markets",
+    bullets: [
+      "B2B buyer network",
+      "Export market access",
+      "Demand intelligence",
+      "Supply chain coordination",
+      "Traceability systems",
+    ],
     color: "primary",
   },
 ];
 
-// Safe Tailwind class mapping
-const colorStyles: Record<
-  string,
-  { bg: string; text: string }
-> = {
-  primary: {
-    bg: "bg-primary/20",
-    text: "text-primary",
-  },
-  accent: {
-    bg: "bg-accent/20",
-    text: "text-accent",
-  },
+const colorStyles: Record<string, { bg: string; text: string }> = {
+  primary: { bg: "bg-primary/20", text: "text-primary" },
+  accent:  { bg: "bg-accent/20",  text: "text-accent"  },
 };
 
 const CoreFocusSection = () => {
@@ -54,7 +59,8 @@ const CoreFocusSection = () => {
             Our Core Focus
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Building India's most trusted digital agriculture ecosystem through three interconnected pillars
+            Building India's most trusted digital agriculture ecosystem
+            through three interconnected pillars
           </p>
         </motion.div>
 
@@ -72,22 +78,31 @@ const CoreFocusSection = () => {
                 className="group relative"
               >
                 <div className="card-gradient rounded-2xl p-8 h-full border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
-                  
+
+                  {/* Icon */}
                   <div
                     className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform ${styles.bg}`}
                   >
-                    <area.icon
-                      className={`w-7 h-7 ${styles.text}`}
-                    />
+                    <area.icon className={`w-7 h-7 ${styles.text}`} />
                   </div>
 
+                  {/* Title */}
                   <h3 className="text-xl font-display font-semibold mb-4">
                     {area.title}
                   </h3>
 
-                  <p className="text-muted-foreground leading-relaxed">
-                    {area.description}
-                  </p>
+                  {/* Bullet list */}
+                  <ul className="space-y-2">
+                    {area.bullets.map((point) => (
+                      <li
+                        key={point}
+                        className="flex items-start gap-2 text-muted-foreground text-sm leading-relaxed"
+                      >
+                        <span className={`mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0 ${styles.text} bg-current`} />
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
 
                 </div>
               </motion.div>

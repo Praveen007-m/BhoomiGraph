@@ -131,15 +131,6 @@ const LOEMSArchitectureSection = () => {
                       </li>
                     ))}
                   </ul>
-
-                  {/* Arrow Connector (Desktop) */}
-                  {index < pillars.length - 1 && (
-                    <div className="hidden lg:flex absolute -right-3 top-1/2 -translate-y-1/2 z-20">
-                      <div className="w-6 h-6 rounded-full bg-background border-2 border-primary flex items-center justify-center">
-                        <ArrowRight className="w-3 h-3 text-primary" />
-                      </div>
-                    </div>
-                  )}
                 </div>
               </motion.div>
             ))}

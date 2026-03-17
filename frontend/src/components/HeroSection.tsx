@@ -139,7 +139,7 @@ const HeroSection = () => {
         </div>
 
         {/* Impact Metrics */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7 }}
@@ -155,7 +155,7 @@ const HeroSection = () => {
             label="Value Enabled for Farmers"
             decimals={1}
           />
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

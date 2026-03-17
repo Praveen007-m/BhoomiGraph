@@ -57,8 +57,8 @@ const ContactSection = () => {
                   <div>
                     <h4 className="font-semibold mb-1">Head Office</h4>
                     <p className="text-muted-foreground text-sm">
-                      LOEMS Technologies Pvt. Ltd.<br />
-                      Bangalore, Karnataka, India
+                      LOEM'S ENTERPRISES PRIVATE LIMITED<br />
+                      Chennai, Tamil Nadu, India
                     </p>
                   </div>
                 </div>
@@ -72,20 +72,20 @@ const ContactSection = () => {
                     <div className="space-y-1 text-sm text-muted-foreground">
                       <p>
                         Partnerships:{" "}
-                        <a href="mailto:partners@bhoomigraph.com" className="text-primary hover:underline">
-                          partners@bhoomigraph.com
+                        <a href="mailto:help@loement.com" className="text-primary hover:underline">
+                           help@loement.com
                         </a>
                       </p>
                       <p>
                         Investments:{" "}
-                        <a href="mailto:invest@bhoomigraph.com" className="text-primary hover:underline">
-                          invest@bhoomigraph.com
+                        <a href="mailto: help@loement.com" className="text-primary hover:underline">
+                           help@loement.com
                         </a>
                       </p>
                       <p>
                         General:{" "}
-                        <a href="mailto:hello@bhoomigraph.com" className="text-primary hover:underline">
-                          hello@bhoomigraph.com
+                        <a href="mailto: help@loement.com" className="text-primary hover:underline">
+                           help@loement.com
                         </a>
                       </p>
                     </div>
@@ -99,7 +99,7 @@ const ContactSection = () => {
                   <div>
                     <h4 className="font-semibold mb-1">Phone</h4>
                     <p className="text-muted-foreground text-sm">
-                      +91 80 1234 5678
+                      +91 8838847445
                     </p>
                   </div>
                 </div>
@@ -131,7 +131,7 @@ const ContactSection = () => {
                   </div>
                 </div>
 
-                <Button onClick={() => navigate("/auth")}>
+                <Button variant="outline" onClick={() => navigate("/auth")}>
                   Get Started
                 </Button>
               </div>
