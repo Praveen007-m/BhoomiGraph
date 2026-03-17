@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => ({
     port: 5173,
     proxy: {
       "/api": {
-        target: "https://loement-backend.onrender.com",
+        target: "https://loement-backend.onrender.com/api",
         changeOrigin: true,
         secure: false,
       },
