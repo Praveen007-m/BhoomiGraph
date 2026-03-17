@@ -71,20 +71,8 @@ const ContactSection = () => {
                     <h4 className="font-semibold mb-1">Email</h4>
                     <div className="space-y-1 text-sm text-muted-foreground">
                       <p>
-                        Partnerships:{" "}
+                        Email:{" "}
                         <a href="mailto:help@loement.com" className="text-primary hover:underline">
-                           help@loement.com
-                        </a>
-                      </p>
-                      <p>
-                        Investments:{" "}
-                        <a href="mailto: help@loement.com" className="text-primary hover:underline">
-                           help@loement.com
-                        </a>
-                      </p>
-                      <p>
-                        General:{" "}
-                        <a href="mailto: help@loement.com" className="text-primary hover:underline">
                            help@loement.com
                         </a>
                       </p>

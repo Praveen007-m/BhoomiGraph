@@ -399,3 +399,5 @@
 2026-03-17 17:04:12:412 [33mwarn[39m: [33m⚠️ Payment variables not configured: RAZORPAY_KEY, RAZORPAY_SECRET. Payment features will be unavailable.[39m
 2026-03-17 20:58:29:5829 [33mwarn[39m: [33m⚠️ AWS variables not configured: AWS_BUCKET. File uploads will be simulated.[39m
 2026-03-17 20:58:29:5829 [33mwarn[39m: [33m⚠️ Payment variables not configured: RAZORPAY_KEY, RAZORPAY_SECRET. Payment features will be unavailable.[39m
+2026-03-17 22:04:07:47 [33mwarn[39m: [33m⚠️ AWS variables not configured: AWS_BUCKET. File uploads will be simulated.[39m
+2026-03-17 22:04:07:47 [33mwarn[39m: [33m⚠️ Payment variables not configured: RAZORPAY_KEY, RAZORPAY_SECRET. Payment features will be unavailable.[39m
